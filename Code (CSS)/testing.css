@@ -1,0 +1,22 @@
+.Body{
+    background-image: url(../images/main4.jpg);
+    text-align: center;
+}
+
+#TSTButt1{
+    text-align: center;
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 5px solid #05BFFC;
+    color: #000000;
+    opacity: 0.8;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20;
+}
+#TSTButt1:hover{
+    transform: scale(1.1);
+    transition: 1.0s transform;
+    opacity: 1;
+}
