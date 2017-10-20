@@ -11,8 +11,8 @@ a{
 #Addr1{
     text-align: center;
     width: 300px;
-    left: 50%;
-    margin-left: 530px;
+    margin-left: auto;
+    margin-right: auto;
 	margin-top: 50px;
     border-radius: 10px;
     border: 5px solid #05BFFC;
@@ -32,7 +32,7 @@ a{
 
 #INFButtReturn{
     text-align: center;
-    width: 100px;
+    width: 150px;
     margin-top: 20px;
     border-radius: 10px;
     border: 5px solid #05BFFC;
@@ -51,9 +51,10 @@ a{
     text-align: left;
     width: 600px;
     margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 10px;
     border: 5px solid #05BFFC;
-    margin-left: 380px;
 	padding: 10px;
 	color: #000000;
     opacity: 0.9;

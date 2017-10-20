@@ -5,7 +5,7 @@
 
 #TSTButt1{
     text-align: center;
-    width: 100px;
+    width: 150px;
     margin-left: 20px;
     margin-top: 20px;
     border-radius: 10px;
@@ -22,7 +22,7 @@
 }
 
 .TSTpages{
-    width: 390px;
+    width: 400px;
     padding: 2px;
     margin-top: 39%;
     margin-left: 35%;
@@ -38,4 +38,8 @@
 .TSTpagesLable:hover{
     color: red;
     font-size: 18px;
+}
+
+.TSTpagesLable:active{
+    border-style: inset;
 }
