@@ -20,3 +20,22 @@
     transition: 1.0s transform;
     opacity: 1;
 }
+
+.TSTpages{
+    width: 390px;
+    padding: 2px;
+    margin-top: 39%;
+    margin-left: 35%;
+    border: 4px solid #05BFFC;
+    background-color: white;
+}
+
+.TSTpagesLable{
+    font-size: 16px;
+    color: #000000;
+}
+
+.TSTpagesLable:hover{
+    color: red;
+    font-size: 18px;
+}

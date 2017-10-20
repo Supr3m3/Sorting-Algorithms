@@ -24,12 +24,19 @@
 .ANLpages{
 	width: 390px;
 	padding: 2px;
-	margin-top: 42%;
-	margin-left: 39%;
+	margin-top: 39%;
+	margin-left: 35%;
 	border: 4px solid #05BFFC;
+    background-color: white;
 }
 
 .ANlpagesLable{
 	font-size: 16px;
 	color: #000000;
 }
+
+.ANlpagesLable:hover{
+    color: red;
+    font-size: 18px;
+}
+
