@@ -1,12 +1,11 @@
 .Body{
     background-image: url(../images/main4.jpg);
-    text-align: center;
 }
 
 #ANLButt1{
     text-align: center;
     width: 150px;
-    margin-left: 20px;
+    margin-left: 45%;
     margin-top: 20px;
     border-radius: 10px;
     border: 5px solid #05BFFC;
@@ -21,10 +20,28 @@
     opacity: 1;
 }
 
+#ANLInstruction{
+    background-color: white;
+    overflow: scroll;
+    color: #000000;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 430px;
+    border: 5px solid #05BFFC;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#ANLInstructionP{
+    padding: 10px;
+}
+
+
 .ANLpages{
-	width: 400px;
+	width: 440px;
 	padding: 2px;
-	margin-top: 39%;
+	margin-top: 5%;
 	margin-left: auto;
     margin-right: auto;
 	border: 4px solid #05BFFC;

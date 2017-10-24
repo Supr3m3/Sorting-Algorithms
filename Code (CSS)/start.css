@@ -23,13 +23,18 @@
 #STRInstruction{
     background-color: white;
     overflow: scroll;
-    color: #05BFFC;
+    color: #000000;
     margin-left: auto;
     margin-right: auto;
     width: 600px;
     height: 430px;
     border: 5px solid #05BFFC;
     border-radius: 5px;
+    font-size: 20px;
+}
+
+#STRInstructionP{
+    padding: 10px;
 }
 
 .STRpages{
