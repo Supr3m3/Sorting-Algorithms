@@ -1,0 +1,98 @@
+.Body{
+    background-image: url(../../images/main4.jpg);
+}
+
+/*
+Here is the Div, where you could find the information about the Bubble Sorting
+*/
+#STRdiv{
+    position: absolute;
+    margin-left: 13%;
+    margin-top: 1%;
+    width: 1000px;
+    height: 520px;
+    border-radius: 5px;
+    border: 4px solid #05BFFC;
+    background-color: black;
+}
+
+/* End */
+
+/*
+Pages line on the bottom of page. Controls the location of the page
+*/
+.STRpages{
+    width: 400px;
+    padding: 2px;
+    margin-top: 42%;
+    margin-left: 35%;
+    border: 4px solid #05BFFC;
+    border-radius: 5px;
+    position: absolute;
+    background-color: white;
+
+}
+
+.STRpagesLable{
+    font-size: 16px;
+    color: #000000;
+}
+
+.STRpagesLable:hover{
+    color: red;
+    font-size: 18px;
+}
+
+.STRpagesContole{
+    display: inline;
+}
+
+/* End */
+
+/*
+Doubled buttons and labels Next and Previous
+*/
+#STRdoubleButtonNext{
+    margin-left: 89%;
+    margin-top: 42%;
+    position: absolute;
+    border: 5px solid #05BFFC;
+    border-radius: 7px;
+}
+
+#STRdoubleButtonReturn{
+    margin-left: 2%;
+    margin-top: 42%;
+    position: absolute;
+    border: 5px solid #05BFFC;
+    border-radius: 7px;
+    opacity: 0.9;
+}
+
+/* Hovering the buttons*/
+#STRdoubleButtonReturn:hover{
+    transform: scale(1.1);
+    transition: 1.0s transform;
+    opacity: 1.0;
+    color: red;
+}
+
+#STRdoubleButtonNext:hover{
+    transform: scale(1.1);
+    transition: 1.0s transform;
+    color: red;
+}
+/* End */
+
+#STRdoubleLabelNext{
+    font-size: 18px;
+    color: #000000;
+}
+
+#STRdoubleLabelReturn{
+    font-size: 18px;
+    color: #000000;
+}
+
+/* End */
+

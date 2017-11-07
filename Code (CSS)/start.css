@@ -61,6 +61,10 @@
     border-style: inset;
 }
 
+.STRpagesContole{
+    display: inline;
+}
+
 #STRButtMAIN{
     width: 80px;
     padding: 2px;
