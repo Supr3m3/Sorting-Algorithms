@@ -8,6 +8,10 @@
     <title>Main Menu</title>
 </head>
 <body id="Body1">
+    <div id="MAINdivNameofSite">
+        <label id="MAINllabelNameofSite">Алгоритми сортування та їх аналіз</label>
+    </div>
+    <!-- Log In -->
     <form action="index.html" onsubmit="return checkForm(this);">
     <script type="text/javascript">
     function checkForm(form)
@@ -63,18 +67,25 @@
     return true;
     }
     </script>
+    <!-- END -->
+
+        <!-- Log In, Password -->
         <div id="MAINLogin"><label>Логін:</label><br />
             <input class="MAINLoginSpace" type="Username" name="username" maxlength="22" required="required"><br />
 			<label>Пароль:</label><br />
             <input class="MAINLoginSpace" type="Password" name="password" maxlength="24" required="required"><br />
             <input id="LogIN" type="submit" name="LogIN" value="Увійти"><br />
         </div>
+        <!-- END -->
     </form>
 
+    <!-- Language choosing -->
     <div id="MAINLanguageDIV">
         <label id="MAINLanguageLabel">Виберіть Мову</label><br />
 
     </div>
+    <!-- END -->
+
     <!--
     <form action="index.html">
         <label for="dates">Choose date:<label>

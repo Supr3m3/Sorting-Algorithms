@@ -1,6 +1,24 @@
 #Body1{
-    background-image: url(../images/main4.jpg);
+    background-image: url(https://i.imgur.com/Nbi7bYI.jpg);
     text-align: center;
+}
+
+#MAINdivNameofSite{
+    width: 500px;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #FF0077;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #FF0077;
+}
+
+#MAINllabelNameofSite{
+    margin: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
 }
 
 #MAINLogin{
@@ -8,13 +26,13 @@
     width: 350px;
 	margin-left: auto;
     margin-right: auto;
-    margin-top: 15%;
+    margin-top: 5%;
     border-radius: 10px;
-    border: 7px solid #05BFFC;
+    border: 7px solid #FF0077;
     color: #ffffff;
     opacity: 0.9;
     font-size: 34;
-	background-color: #000000;
+	background-color: #F76FAF;
     font-family: "Comic Sans MS", sans-serif;
 
 }
@@ -23,9 +41,9 @@
     width: 200px;
     margin-left: auto;
     margin-right: auto;
-    border: 5px solid #05BFFC;
+    border: 5px solid #FF0077;
     border-radius: 5px;
-    background-color: black;
+    background-color: #F76FAF;
 }
 
 #MAINLanguageLabel{
@@ -51,18 +69,18 @@
 	font-size: 20px;
     margin-top: 4px;
 	color: #ffffff;
-	background-color: #000000;
+	background-color: #F76FAF;
     margin-bottom: 4px;
-    border: 5px solid #05BFFC;
+    border: 5px solid #FF0077;
 }
 
 #LogIN{
     font-size: 20px;
     margin-top: 4px;
 	color: #ffffff;
-	background-color: #000000;
+	background-color: #F76FAF;
     margin-bottom: 4px;
-    border: 5px solid #05BFFC;
+    border: 5px solid #FF0077;
 }
 
 .MAINLoginSpace{
