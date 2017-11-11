@@ -8,82 +8,42 @@
     <title>Main Menu</title>
 </head>
 <body id="Body1">
+    <!-- Description of the name of the program -->
     <div id="MAINdivNameofSite">
         <label id="MAINllabelNameofSite">Алгоритми сортування та їх аналіз</label>
     </div>
-    <!-- Registration check
-    <script type="text/javascript">
-    function checkForm(form)
-    {
-    if(form.username.value == "") {
-      alert("Error: Username cannot be blank!");
-      form.username.focus();
-      return false;
-    }
-    re = /^\w+$/;
-    if(!re.test(form.username.value)) {
-      alert("Error: Username must contain only letters, numbers and underscores!");
-      form.username.focus();
-      return false;
-    }
-
-    if(form.password.value != "" && form.password.value == form.password.value) {
-      if(form.password.value.length < 6) {
-        alert("Error: Password must contain at least six characters!");
-        form.password.focus();
-        return false;
-      }
-      if(form.password.value == form.username.value) {
-        alert("Error: Password must be different from Username!");
-        form.password.focus();
-        return false;
-      }
-      re = /[0-9]/;
-      if(!re.test(form.password.value)) {
-        alert("Error: password must contain at least one number (0-9)!");
-        form.password.focus();
-        return false;
-      }
-      re = /[a-z]/;
-      if(!re.test(form.password.value)) {
-        alert("Error: password must contain at least one lowercase letter (a-z)!");
-        form.password.focus();
-        return false;
-      }
-      re = /[A-Z]/;
-      if(!re.test(form.password.value)) {
-        alert("Error: password must contain at least one uppercase letter (A-Z)!");
-        form.password.focus();
-        return false;
-      }
-    } else {
-      alert("Error: Please check that you've entered and confirmed your password!");
-      form.password.focus();
-      return false;
-    }
-
-    alert("You entered a valid password: " + form.password.value);
-    return true;
-    }
-    </script>
-    -->
-
     <!-- END -->
 
+      <!-- Registration + Log In -->
+      <div id="MAINdiv">
         <!-- Log In, Password -->
-          <form action="index.html" onsubmit="return checkForm(this);">
-            <div id="MAINLogin"><label>Логін:</label><br />
-              <input class="MAINLoginSpace" type="Username" name="username" maxlength="22" required="required"><br />
+        <script type="text/javascript">
+                function CheckIt(form){
+                  if((form.username.value == "Ossier")&&(form.password.value == "Dan16481657")){
+                    alert("Вхід підтверджено!");
+                    return true;
+                  } else {
+                    alert("Вхід відхилено");
+                    return false;
+                  }
+                }
+              </script>
+        <form id="MAINdivForm1" action="index.html" onsubmit="return СheckIt(this);">
+              <label>Логін:</label><br />
+              <input class="MAINLoginSpace" type="username" name="username" maxlength="22" required="required"><br />
 			        <label>Пароль:</label><br />
-              <input class="MAINLoginSpace" type="Password" name="password" maxlength="24" required="required"><br />
-              <input id="LogIN" type="submit" name="LogIN" value="Увійти">
-          </form>
-          <form action="register.html">
-            <input id="SignIN" type="submit" name="SignIN" value="Реєстрація">
-          </form>
-        </div>
-        <!-- END -->
+              <input class="MAINLoginSpace" type="password" name="password" maxlength="22" required="required"><br />
+              <input id="LogIN" type="submit" value="Увійти!">
+        </form>
+        <!-- END's here -->
 
+        <!-- Registration button -->
+        <form id="MAINdivForm2" action="register.html">
+            <button id="SignIN">Реєстрація!</button>
+        </form>
+        <!-- END's here -->
+      </div>
+      <!-- END -->
 
     <!-- Language choosing -->
     <div id="MAINLanguageDIV">

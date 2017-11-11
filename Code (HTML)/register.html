@@ -2,6 +2,7 @@
 	<head>
 		<title>Register</title>
         <meta charset="UTF-8">
+        <meta http-equiv="pragma" content= "no-cache ">
 		<link href="../Code (CSS)/register.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
@@ -10,23 +11,24 @@
          </form>
          <fieldset id="REGfield">
             <legend>Реєстрація</legend>
-            <form action="main.html">
+            <form action="main.html" onsubmit="return checkForm(this);">
                 <label class="REGfieldLable">Введіть Ваше ім'я: </label>
-                <input class="REGinputTypes" type="text"><br />
+                <input class="REGinputTypes" type="text" name="Name" required="required"><br />
                 <label class="REGfieldLable">Введіть Ваше прізвище: </label>
-                <input class="REGinputTypes" type="text"><br />
+                <input class="REGinputTypes" type="text" name="Surname" required="required"><br />
                 <label class="REGfieldLable">Стать: </label>
-                <select id="REGselection" name="Gender">
+                <select id="REGselection" name="Gender" required="required">
                     <option value="Male">Чоловіча</option>
                     <option value="Female">Жіноча</option>
                 </select> <br />
                 <label class="REGfieldLable">Введіть логін: </label>
-                <input class="REGinputTypes" type="username"><br />
+                <input class="REGinputTypes" type="username" name="username" required="required"><br />
                 <label class="REGfieldLable">Введіть пароль: </label>
-                <input class="REGinputTypes" type="password"><br />
+                <input class="REGinputTypes" type="password" name="password1" required="required"><br />
                 <label class="REGfieldLable">Введіть пароль ще раз: </label>
-                <input class="REGinputTypes" type="password"><br />
-                <input id="REGok" type="submit" value="Завершити">
+                <input class="REGinputTypes" type="password" name="password2" required="required"><br />
+                <input class="REGok" type="submit" value="Завершити">
+                <button class="REGok" id="REGshowButton">ShowAll</button>
             </form>
             <script type="text/javascript">
                 function checkForm(form)
@@ -42,42 +44,43 @@
                       form.username.focus();
                       return false;
                     }
-                    if(form.password.value != "" && form.password.value == form.password.value) {
-                      if(form.password.value.length < 6) {
+
+                    if(form.password1.value != "" && form.password1.value == form.password2.value) {
+                      if(form.password1.value.length < 6) {
                         alert("Error: Password must contain at least six characters!");
-                        form.password.focus();
+                        form.password1.focus();
                         return false;
                       }
-                      if(form.password.value == form.username.value) {
+                      if(form.password1.value == form.username.value) {
                         alert("Error: Password must be different from Username!");
-                        form.password.focus();
+                        form.password1.focus();
                         return false;
                       }
                       re = /[0-9]/;
-                      if(!re.test(form.password.value)) {
+                      if(!re.test(form.password1.value)) {
                         alert("Error: password must contain at least one number (0-9)!");
-                        form.password.focus();
+                        form.password1.focus();
                         return false;
                       }
                       re = /[a-z]/;
-                      if(!re.test(form.password.value)) {
+                      if(!re.test(form.password1.value)) {
                         alert("Error: password must contain at least one lowercase letter (a-z)!");
-                        form.password.focus();
+                        form.password1.focus();
                         return false;
                       }
                       re = /[A-Z]/;
-                      if(!re.test(form.password.value)) {
+                      if(!re.test(form.password1.value)) {
                         alert("Error: password must contain at least one uppercase letter (A-Z)!");
-                        form.password.focus();
+                        form.password1.focus();
                         return false;
                       }
                     } else {
                       alert("Error: Please check that you've entered and confirmed your password!");
-                      form.password.focus();
+                      form.password1.focus();
                       return false;
                     }
-
-                    alert("You entered a valid password: " + form.password.value);
+                    alert("You entered a valid username: " + form.username.value);
+                    alert("You entered a valid password: " + form.password1.value);
                     return true;
                     }
             </script>

@@ -23,11 +23,11 @@
 }
 /* END */
 
-/* Log in is here */
-#MAINLogin{
+/* Log in + Registration is here */
+#MAINdiv{
     text-align: center;
     width: 350px;
-    height: 240px;
+    height: 210px;
 	margin-left: auto;
     margin-right: auto;
     margin-top: 2%;
@@ -39,6 +39,16 @@
 	background-color: #F76FAF;
     font-family: "Comic Sans MS", sans-serif;
 }
+
+/* doubled Forms created for inlines */
+#MAINdivForm1{
+    display: inline;
+}
+
+#MAINdivForm2{
+    display: inline;
+}
+/* END */
 
 .MAINLoginSpace{
     border-radius: 10px;
@@ -58,7 +68,7 @@
 /* Log in button */
 #LogIN{
     font-size: 18px;
-    margin-top: 4px;
+    padding: 3px;
     color: #ffffff;
     background-color: #F76FAF;
     margin-bottom: 4px;
@@ -78,10 +88,12 @@
     font-size: 18px;
     margin-top: 4px;
     color: #ffffff;
+    padding: 3px;
     background-color: #F76FAF;
     margin-bottom: 4px;
     border: 5px solid #FF0077;
     display: inline;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 #SignIN:hover{
