@@ -1,32 +1,36 @@
 #Body1{
-    background-image: url(https://i.imgur.com/Nbi7bYI.jpg);
-    text-align: center;
+    background-image: url(../images/theme.jpg);
 }
 
+/* The name which site bears */
 #MAINdivNameofSite{
     width: 500px;
-    margin-top: 5%;
+    margin-top: 6%;
     margin-left: auto;
     margin-right: auto;
     border: 5px solid #FF0077;
     border-radius: 10px;
     text-align: center;
-    background-color: #FF0077;
+    background-color: #F76FAF;
 }
 
 #MAINllabelNameofSite{
     margin: 5px;
     color: white;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 36px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
+/* END */
 
+/* Log in is here */
 #MAINLogin{
     text-align: center;
     width: 350px;
+    height: 240px;
 	margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: 2%;
     border-radius: 10px;
     border: 7px solid #FF0077;
     color: #ffffff;
@@ -34,24 +38,82 @@
     font-size: 34;
 	background-color: #F76FAF;
     font-family: "Comic Sans MS", sans-serif;
-
 }
 
+.MAINLoginSpace{
+    border-radius: 10px;
+    width: 175px;
+    height: 30px;
+    border: 5px solid #ffffff;
+    font-size: 16px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.MAINLoginSpace:hover{
+    transition: 0.0s background-color, border;
+    background-color: #E4E3E6;
+    border: 5px solid #E4E3E6;
+}
+
+/* Log in button */
+#LogIN{
+    font-size: 18px;
+    margin-top: 4px;
+    color: #ffffff;
+    background-color: #F76FAF;
+    margin-bottom: 4px;
+    border: 5px solid #FF0077;
+    display: inline;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#LogIN:hover{
+    transition: 0.0s background-color, border;
+    border: 5px solid #E4E3E6;
+}
+/* END */
+
+/* Sign In button */
+#SignIN{
+    font-size: 18px;
+    margin-top: 4px;
+    color: #ffffff;
+    background-color: #F76FAF;
+    margin-bottom: 4px;
+    border: 5px solid #FF0077;
+    display: inline;
+}
+
+#SignIN:hover{
+    transition: 0.0s background-color, border;
+    border: 5px solid #E4E3E6;
+}
+/* END */
+
+
+/* END */
+
+/* Language spot */
 #MAINLanguageDIV{
     width: 200px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
     border: 5px solid #FF0077;
     border-radius: 5px;
     background-color: #F76FAF;
 }
 
 #MAINLanguageLabel{
-    font-size: 20px;
+    font-size: 18px;
     color: white;
+    margin-left: 33px;
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
+/* END */
 
-/* Comment
+/* Future Comment space
 #MAINComment{
     text-align: center;
     width: 200px;
@@ -65,7 +127,8 @@
 }
 */
 
-#REGISTER{
+/* Future button registration
+#SignIn{
 	font-size: 20px;
     margin-top: 4px;
 	color: #ffffff;
@@ -73,18 +136,42 @@
     margin-bottom: 4px;
     border: 5px solid #FF0077;
 }
+*/
 
-#LogIN{
-    font-size: 20px;
-    margin-top: 4px;
-	color: #ffffff;
-	background-color: #F76FAF;
-    margin-bottom: 4px;
-    border: 5px solid #FF0077;
+/* Button with flags */
+#MAINbuttonImage1{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 1%;
+    border: 5px solid #F76FAF;
 }
 
-.MAINLoginSpace{
-    border-radius: 10px;
-    border: 5px solid #ffffff;
-    font-size: 16;
+#MAINbuttonImage1:active{
+
 }
+
+#MAINbuttonImage1:hover{
+    transform: scale(1.1);
+    transition: 1.0s transform;
+}
+
+#MAINbuttonImage2{
+    width: 70px;
+    border: 5px solid #F76FAF;
+    height: 70px;
+    position: absolute;
+    margin-left: 8%;
+    margin-top: 1%;
+}
+
+#MAINbuttonImage2:active{
+
+}
+
+#MAINbuttonImage2:hover{
+    transform: scale(1.1);
+    transition: 1.0s transform;
+}
+/* END */

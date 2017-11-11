@@ -11,8 +11,7 @@
     <div id="MAINdivNameofSite">
         <label id="MAINllabelNameofSite">Алгоритми сортування та їх аналіз</label>
     </div>
-    <!-- Log In -->
-    <form action="index.html" onsubmit="return checkForm(this);">
+    <!-- Registration check
     <script type="text/javascript">
     function checkForm(form)
     {
@@ -67,32 +66,32 @@
     return true;
     }
     </script>
+    -->
+
     <!-- END -->
 
         <!-- Log In, Password -->
-        <div id="MAINLogin"><label>Логін:</label><br />
-            <input class="MAINLoginSpace" type="Username" name="username" maxlength="22" required="required"><br />
-			<label>Пароль:</label><br />
-            <input class="MAINLoginSpace" type="Password" name="password" maxlength="24" required="required"><br />
-            <input id="LogIN" type="submit" name="LogIN" value="Увійти"><br />
+          <form action="index.html" onsubmit="return checkForm(this);">
+            <div id="MAINLogin"><label>Логін:</label><br />
+              <input class="MAINLoginSpace" type="Username" name="username" maxlength="22" required="required"><br />
+			        <label>Пароль:</label><br />
+              <input class="MAINLoginSpace" type="Password" name="password" maxlength="24" required="required"><br />
+              <input id="LogIN" type="submit" name="LogIN" value="Увійти">
+          </form>
+          <form action="register.html">
+            <input id="SignIN" type="submit" name="SignIN" value="Реєстрація">
+          </form>
         </div>
         <!-- END -->
-    </form>
+
 
     <!-- Language choosing -->
     <div id="MAINLanguageDIV">
         <label id="MAINLanguageLabel">Виберіть Мову</label><br />
-
+        <button id="MAINbuttonImage1"><img src="../images/ukraine.jpg" alt="" width="45px" height="45px"></button>
+        <button id="MAINbuttonImage2"><img src="../images/english.jpg" alt="" width="45px" height="45px"></button>
     </div>
     <!-- END -->
-
-    <!--
-    <form action="index.html">
-        <label for="dates">Choose date:<label>
-        <input type="date" name ="dates">
-        <input type="submit" name="Send" value="Send">
-    </form>
-    -->
 
     <!-- <form action="index.html" method="post">
         <p id="MAINComment">

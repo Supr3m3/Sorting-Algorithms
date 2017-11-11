@@ -1,21 +1,24 @@
 .Body{
-    background-image: url(../images/main4.jpg);
+    background-image: url(../images/theme.jpg);
     text-align: center;
 	overflow: hidden;
 }
 
+/* Some options to change the reference */
 a{
-    color: #68FFFF;
+    color: #FF0000;
 }
+/* END */
 
-#Addr1{
+/* Address, which describes the author */
+#Address{
     text-align: center;
-    width: 300px;
+    width: 320px;
     margin-left: auto;
     margin-right: auto;
 	margin-top: 50px;
     border-radius: 10px;
-    border: 5px solid #05BFFC;
+    border: 5px solid #FF0077;
     color: #000000;
     opacity: 0.9;
     background-color: #FFFFFF;
@@ -24,37 +27,41 @@ a{
 
 }
 
-#Addr1:hover{
+#Address:hover{
     transform: scale(1.1);
     transition: 1.0s transform;
     opacity: 1;
 }
+/* END */
 
-#INFButtReturn{
+/* Button, which returns to menu (index.html) */
+#INFButtonReturn{
     text-align: center;
     width: 150px;
     margin-top: 20px;
     border-radius: 10px;
-    border: 5px solid #05BFFC;
+    border: 5px solid #FF0077;
     color: #000000;
     opacity: 0.9;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 20;
 }
-#INFButtReturn:hover{
+#INFButtonReturn:hover{
     transform: scale(1.1);
     transition: 1.0s transform;
     opacity: 1;
 }
+/* END */
 
-#INFp{
+/* Information about the program */
+#INFO{
     text-align: left;
     width: 600px;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    border: 5px solid #05BFFC;
+    border: 5px solid #FF0077;
 	padding: 10px;
 	color: #000000;
     opacity: 0.9;
@@ -62,8 +69,9 @@ a{
     font-size: 24;
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
-#INFp:hover{
+#INFO:hover{
     transform: scale(1.1);
     transition: 1.0s transform;
     opacity: 1;
 }
+/* END */

@@ -1,5 +1,5 @@
 .Body{
-    background-image: url(../images/main4.jpg);
+    background-image: url(../images/theme.jpg);
 }
 
 #TSTButt1{
@@ -8,12 +8,13 @@
     margin-left: 45%;
     margin-top: 20px;
     border-radius: 10px;
-    border: 5px solid #05BFFC;
+    border: 5px solid #F76FAF;
     color: #000000;
-    opacity: 0.8;
+    opacity: 0.9;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 20;
 }
+
 #TSTButt1:hover{
     transform: scale(1.1);
     transition: 1.0s transform;
@@ -28,9 +29,10 @@
     margin-right: auto;
     width: 800px;
     height: 430px;
-    border: 5px solid #05BFFC;
+    border: 5px solid #F76FAF;
     border-radius: 5px;
     font-size: 20px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 #TSTInstructionP{
@@ -42,7 +44,7 @@
     padding: 2px;
     margin-top: 5%;
     margin-left: 35%;
-    border: 4px solid #05BFFC;
+    border: 4px solid #F76FAF;
     background-color: white;
 }
 
