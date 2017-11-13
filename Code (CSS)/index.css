@@ -1,6 +1,7 @@
 .Body{
     background-image: url(../images/theme.jpg);
     text-align: center;
+    height: 100vh;
 }
 
 #INDButton1{
