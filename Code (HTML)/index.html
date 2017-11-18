@@ -1,25 +1,74 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-    <meta http-equiv="pragma" content= "no-cache ">
+    <meta http-equiv="pragma" content="no-cache ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sorting Algorithms</title>
-    <link href="../Code (CSS)/index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../vendor/bulma.min.css">
+    <link rel="stylesheet" href="../Code%20(CSS)/styles.css">
+    <link href="../Code (CSS)/index.css" rel="stylesheet" type="text/css"/>
 </head>
-<body class="Body">
-    <form action="main.html">
-        <button id="INDButton2">Вихід!</button>
-    </form>
-    <form action="start.html">
-        <button id="INDButton1">Почати!</button>
-    </form>
-    <form action="analysis.html">
-        <button id="INDButton">Аналіз!</button>
-    </form>
-        <form action="testing.html">
-        <button id="INDButton">Тестування!</button>
-    </form>
-    <form action="info.html">
-        <button id="INDButton">Інформація!</button>
-    </form>
+<body>
+<section class="section">
+    <div class="container is-fluid">
+            <div class="columns">
+                <div class="column is-2 Index--Menu">
+                    <aside class="menu">
+                      <p class="menu-label">
+                        <span class="tag is-black">
+                        Початок подорожі
+                        </span>
+                      </p>
+                      <ul class="menu-list">
+                        <li><a href="start.html" class="button is-white">Почати!</a></li>
+                      </ul>
+                      <p class="menu-label">
+                        <span class="tag is-black">
+                        Графіка
+                        </span>
+                      </p>
+                      <ul class="menu-list">
+                        <li><a href="analysis.html" class="button is-white">Аналіз!</a></li>
+                      <p class="menu-label">
+                        <span class="tag is-black">
+                        Екзаменаційні завдання
+                        </span>
+                      </p>
+                      <ul class="menu-list">
+                        <li><a href="testing.html" class="button is-white">Тестування!</a></li>
+                      </ul>
+                      <p class="menu-label">
+                        <span class="tag is-black">
+                        Інформація
+                        </span>
+                      </p>
+                      <ul class="menu-list">
+                        <li><a href="info.html" class="button is-white">Інформація!</a></li>
+                      </ul>
+                    </aside>
+                </div>
+                <div class="column is-8 Index--description">
+                    <div class="Index--description">
+                        <h1>Для чого це сортування потрібно і з чим його їдять?</h1>
+                    </div>
+                    <div class="content is-medium ">
+                        <p class="Index--description">
+                            Алгоритм сортування — це алгоритм, що розв'язує задачу сортування, тобто здійснює впорядкування лінійного списку (масиву) елементів.
+                            Термін сортування (англ. sorting) означає розділення елементів за певними ознаками (сортами) і не дуже точно описує поставлене завдання. Точнішою була б назва впорядкування (англ. ordering), але через перевантаженість слова «порядок» (англ. order) різними значеннями, в цьому завданні ним не скористалися.
+                        </p>
+                        <p class="Index--description">
+                            Для алгоритму сортування (як і для будь-якого іншого сучасного алгоритму) основними характеристиками є:
+                            Час, необхідний на впорядкування n-елементного масиву. Для значної кількості алгоритмів середній і найгірший час впорядкування n-елементного масиву є О(n²) — це пов'язано з тим, що в них передбачені перестановки елементів, що стоять поряд (різниця між індексами елементів не перевищує деякого заданого числа). Такі алгоритми зазвичай є стабільними, хоча і не ефективними для великих масивів. Інший клас алгоритмів здійснює впорядкування за час O(n log n). В цих алгоритмах використовується можливість обміну елементів, що знаходяться на будь-якій відстані один від одного.
+                            Необхідність додаткової пам'яті для сортування. Зазвичай необхідно O(1) пам'яті.
+                            Стабільність (англ. Stability) — стабільне сортування не змінює взаємного розташування елементів з однаковими ключами.
+                        </p>
+                    </div>
+                </div>
+            </div>
+			<a href="main.html" class="button is-white">Вихід</a>
+        </div>
+    </div>
+</section>
 </body>
 </html>

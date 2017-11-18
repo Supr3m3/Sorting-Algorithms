@@ -1,101 +1,85 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-    <meta http-equiv="pragma" content= "no-cache ">
-    <title>Start!</title>
-    <link href="../Code (CSS)/start.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="pragma" content="no-cache ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../vendor/bulma.min.css">
+    <link rel="stylesheet" href="../Code%20(CSS)/styles.css">
+    <link href="../Code (CSS)/start.css" rel="stylesheet" type="text/css"/>
 </head>
-<body class="Body">
-    <!-- Button-returner to index.html -->
-    <form action="index.html">
-        <button id="STRButton1">Повернутися!</button>
-    </form>
-
-    <!-- Some text information about this "Start!" education -->
-    <div id="STRInstruction">
-    	<p>
-			<h1 align="center">Інструкція</h1>
-            <p id="STRInstructionText">Що саме необідно робити для хороших результатів та для здобуття успіху у програмуванні? Це питання турбує, напевно, кожного, хто хотів би в майбутньому працювати програмістом. Отож, успішний й умілий програміст повинен:
-            </p>
-			<ul>
-				<li>Бути уважним і спостережливим</li>
-				<li>Міркувати, слідкувати за алгоритмами</li>
-				<li>Звертати увагу на дрібниці і підказки у ході пояснень</li>
-			</ul>
-            <p id="STRInstructionText">Розпочнемо з того, що дана програма дає Вам змогу самим проаналізувати кожен рядок коду. Це є сутєвим і важливим елементом навчання, адже програмування це насамперед продумування алгоритмів, аналіз зроблених помилок, реалізація написаного коду.<br /><br />
-            Також, для осягнення нових знань у програмуванні, слід зазначити, що необхідно застосовувати вивчену базу у таких мовах програмування як: <strong>C++</strong>, <strong>JavaScript</strong><br /><br />
-            Якщо Ви не засвоїли базу з цих мов програмувань, Вам буде дана література, і ссилкі на сайти, звідки можна взяти додаткову інформацію для вивчення мов.
-            Отже, на цьому слові я хотів би побажати Вам, читачі, <strong>удачі</strong> й дати Вам невеличку <strong>пораду</strong>, яка дасть змогу осягнути матеріал швидше:
-            <ul>
-                <li>Не опускайте руки, коли Вам щось не вдається зробити</li>
-                <li>Звертайтеся до додаткових ресурсів, якщо щось невідомо</li>
-            </ul>
-            <p align="center"><strong>Нехай щастить!</strong></p>
-            </p>
-    	</p>
-	</div>
-    <!-- END -->
-
-    <!-- Buttons of page control -->
-    <form action="start.html">
-    	<button id="STRButtonMAIN">Головна</button>
-    </form>
-	<div class="STRpages">
-        <form action="startPages/one.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#1</label>
-            </button>
-        </form>
-		<form action="startPages/two.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#2</label>
-            </button>
-        </form>
-        <form action="startPages/three.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#3</label>
-            </button>
-        </form>
-        <form action="startPages/four.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#4</label>
-            </button>
-        </form>
-        <form action="startPages/five.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#5</label>
-            </button>
-        </form>
-        <form action="startPages/six.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#6</label>
-            </button>
-        </form>
-        <form action="startPages/seven.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#7</label>
-            </button>
-        </form>
-        <form action="startPages/eight.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#8</label>
-            </button>
-        </form>
-        <form action="startPages/nine.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#9</label>
-            </button>
-        </form>
-        <form action="startPages/ten.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#10</label>
-            </button>
-        </form>
-	<div>
-    <!-- END -->
-
-	<!--
-    <iframe src="main.html" width="400" height="300" seamless="seamless" scrolling="yes"></iframe>
-	-->
+<body>
+<section class="section">
+    <div class="container is-fluid">
+        <div class="columns">
+                <div class="column is-3">
+                    <div class="Start--form__buttons">
+                        <a href="index.html" class="button is-success">Повернутися</a>
+                    </div>
+                    <aside class="menu Start--Menu">
+                      <p class="menu-label">
+                        <span class="tag is-black is-large">
+                            Алгоритми сортування
+                        </span>
+                       </p>
+                      <ul class="menu-list">
+                        <div class="column Start--list">
+                            <!-- 1 -->
+                            <li><a href="startPages/one.html" class="button is-white Start--list__buttons">Bubble Sort!</a></li>
+                            <!-- 2 -->
+                            <li><a href="startPages/two.html" class="button is-white Start--list__buttons">Insertion Sort!</a></li>
+                            <!-- 3 -->
+                            <li><a href="startPages/three.html" class="button is-white Start--list__buttons">Quick Sort</a></li>
+                            <!-- 4 -->
+                            <li><a href="startPages/four.html" class="button is-white Start--list__buttons">Merge Sort</a></li>
+                            <!-- 5 -->
+                            <li><a href="startPages/five.html" class="button is-white Start--list__buttons">Smooth Sort</a></li>
+                            <!-- 6 -->
+                            <li><a href="startPages/six.html" class="button is-white Start--list__buttons">Selection Sort</a></li>
+                            <!-- 7 -->
+                            <li><a href="startPages/seven.html" class="button is-white Start--list__buttons">Pyramid Sort</a></li>
+                            <!-- 8 -->
+                            <li><a href="startPages/eight.html" class="button is-white Start--list__buttons">Bucket Sort</a></li>
+                            <!-- 9 -->
+                            <li><a href="startPages/nine.html" class="button is-white Start--list__buttons">Shell Sort</a></li>
+                            <!-- 10 -->
+                            <li><a href="startPages/ten.html" class="button is-white Start--list__buttons">Random Sort</a></li>
+                        </div>
+                      </ul>
+                    </aside>
+                    <div class="column">
+                        <a href="startPages/one.html" class="button is-primary">Розпочати!</a>
+                    </div>
+                </div>
+            <div class="column is-9 Start--description">
+                <div class="content is-medium is-centered">
+                    <div>
+                        <p>
+                            <h1 class="title Start--label">Інструкція</h1>
+                                <p class="Start--label">Що саме необідно робити для хороших результатів та для здобуття успіху у програмуванні? Це питання турбує, напевно, кожного, хто хотів би в майбутньому працювати програмістом. Отож, успішний й умілий програміст повинен:
+                                </p>
+                                    <ul class="menu-list Start--label">
+                                        <li>Бути уважним і спостережливим</li>
+                                        <li>Міркувати, слідкувати за алгоритмами</li>
+                                        <li>Звертати увагу на дрібниці і підказки у ході пояснень</li>
+                                    </ul>
+                                <p class="Start--label">Розпочнемо з того, що дана програма дає Вам змогу самим проаналізувати кожен рядок коду. Це є сутєвим і важливим елементом навчання, адже програмування це насамперед продумування алгоритмів, аналіз зроблених помилок, реалізація написаного коду.
+                                Також, для осягнення нових знань у програмуванні, слід зазначити, що необхідно застосовувати вивчену базу у таких мовах програмування як: C++, JavaScript
+                                Якщо Ви не засвоїли базу з цих мов програмувань, Вам буде дана література, і ссилкі на сайти, звідки можна взяти додаткову інформацію для вивчення мов.
+                                Отже, на цьому слові я хотів би побажати Вам, читачі, успіхів й дати Вам невеличку пораду, яка дасть змогу осягнути матеріал швидше:
+                                        <ul class="menu-list Start--label">
+                                            <li>Не опускайте руки, коли Вам щось не вдається зробити</li>
+                                            <li>Звертайтеся до додаткових ресурсів, якщо щось невідомо</li>
+                                        </ul>
+                                    <p class="Start--label">Нехай щастить!</p>
+                                </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 </html>

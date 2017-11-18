@@ -1,4 +1,4 @@
-.Test {
+.All {
     height: auto;
     min-height: 100%;
     display: flex;
@@ -6,21 +6,19 @@
     align-items: center;
 }
 
-.Test .Test--form {
+.All .All--form {
     margin: auto;
-	margin-top: 5%;
 }
 
-.Test--Menu{
-    margin-top: 8%;
-	margin-left: 5%;
+.All--Menu{
+    margin-top: 5%;
 }
 
-.Test--form__buttons{
+.All--form__buttons{
     margin-top: 1%;
 }
 
-.Test--list{
+.All--list{
     margin-left: 70px;
 }
 
@@ -29,29 +27,22 @@
     margin-top: 2px;
 }
 
-.Test--label {
+.All--label {
     font-size: 18px;
     color: white;
-    text-align: center;
+    text-align: justify;
 }
 
-.Test--form__buttons {
-    margin-top: 23%;
-	margin-left: 3.5%;
+.All--form .button {
+    margin-top: 2px;
     position: absolute;
 }
 
-.Test--description{
+.All--description{
     font-size: 18px;
-	text-align: center;
 }
 
-.Test--description__div{
-	margin-top: 5%;
-	margin-left: 5%;
-}
-
-.Test-code{
+.All-code{
     width: 200px;
     margin-right: 300px;
     text-align: justify;

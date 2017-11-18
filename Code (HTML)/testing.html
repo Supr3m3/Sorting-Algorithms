@@ -1,57 +1,85 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-    <meta http-equiv="pragma" content= "no-cache ">
-    <title>Testing!</title>
-    <link href="../Code (CSS)/testing.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="pragma" content="no-cache ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Testing</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../vendor/bulma.min.css">
+    <link rel="stylesheet" href="../Code%20(CSS)/styles.css">
+    <link href="../Code (CSS)/testing.css" rel="stylesheet" type="text/css"/>
 </head>
-<body class="Body">
-    <form action="index.html">
-        <button id="TSTButt1">Повернутися!</button>
-    </form>
-    <div id="TSTInstruction">
-        <h1 align="center">Інструкція</h1>
-        <p id="TSTInstructionP">
-        Що ж...Це останній, вирішальний етап у Вашому навчанні,
-        <strong><em>ЕКЗАМЕН</em></strong>. <br /><br />
-        Екзамен завжди звучить якось 'страшнувато', тому будемо вживати слово 'тест'. Отож, усе те, що ви засвоїли на попередніх етапах навчання, а саме, поглибленне вивчення алгоритмів сортування, їх аналіз, буде в <del>екзаменаційних</del> тестових завданнях.<br /><br />
-        Не слід забувати про те, що кожна праця оцінюється, й відповідно до Ваших результатів буде виставлено тестовий бал.<br /><br />
-        Слід зазначити, що враховується в тестовий бал як і час виконання тестових завдань, так і ефективність алгоритму й його 'валідність', тобто правильність. <br /> <br />
-        Проте перед тим як вибрати остаточну відповідь чи відіслати правильний алгоритм сортування, спочатку перевірте декілька раз, адже єдина помилка в компіляції (навіть пропущенна крапка з комою ";" є грубою помилкою) - це втрата балу. Тому, 'Краще сім разів відміряй один раз відріж'.
-        <p align="center"><strong>Буть уважним й спостережливим!</strong></p>
-        </p>
+<body>
+<section class="section">
+    <div class="container is-fluid">
+            <div class="columns">
+                <div class="column is-2 Test--Menu">
+                    <aside class="menu">
+                      <p class="menu-label">
+                        <span class="tag is-black">
+                        Початок подорожі
+                        </span>
+                      </p>
+                      <ul class="menu-list">
+                        <li><a href="start.html" class="button is-white">Почати!</a></li>
+                      </ul>
+                      <p class="menu-label">
+                        <span class="tag is-black">
+                        Графіка
+                        </span>
+                      </p>
+                      <ul class="menu-list">
+                        <li><a href="analysis.html" class="button is-white">Аналіз!</a></li>
+                      <p class="menu-label">
+                        <span class="tag is-black">
+                        Екзаменаційні завдання
+                        </span>
+                      </p>
+                      <ul class="menu-list">
+                        <li><a class="is-active Test--list__buttons" id="Test--list__activeButton" aria-current="page">Тестування!</a></li>
+                      </ul>
+                      <p class="menu-label">
+                        <span class="tag is-black">
+                        Інформація
+                        </span>
+                      </p>
+                      <ul class="menu-list">
+                        <li><a href="info.html" class="button is-white">Інформація!</a></li>
+                      </ul>
+                    </aside>
+                </div>
+                <div class="column is-8 Test--description__div">
+                    <div class="Test--description">
+                        <h1>Інструкція до вкладки тестування</h1>
+                    </div>
+                    <div class="content is-medium">
+                        <p class="Test--description">
+                            Якщо Ви перейшли на дану вкладку, ви осягнули вивчений матеріал на сторінці 
+							'Початок', можна вважати Вас майстром по написанню алгоритмів сортування! 
+							Проте, якщо ви засвоїли матеріал графічно, то можна перевірити вивчений матеріал й графічно!<br /><br />
+							Вам вже відомо, що кожен алгоритм сортування є особливим у декількох характеристиках, а саме:<br />
+							У швидкості виконання алгоритму<br />
+							У затраченому часі на виконання цього алгоритму<br />
+							У ефективності виконання<br />
+							
+                        </p>
+                        <p class="Test--description">
+                            Тепер у Вас виникає питання, а який ж з алгоритмів сортування є 
+							найефетивнішим, найшвидшим й найменш затратним по часу? Відповідь на це дасть Вам даний підрозділ 
+							програми. Ми розглянемо кожен з існуючих алгоритмів сортування, проаналізуймо його й розрахуймо 
+							математично усі ті перелічені зверху параметри сортувального алгоритму.<br /><br />
+							В кінці цього підрозділу програма проілюструє змагання між всіма алгоритмами сортуання, визначить переможця змагань. 
+							Цікаво?
+                        </p>
+						<p class="Test--description">
+							Що ж, приступимо до роботи!
+						</p>
+                    </div>
+                </div>
+            </div>
+			<a href="index.html" class="button is-white">Повернутись</a>
+        </div>
     </div>
-        <div class="TSTpages">
-        <button>
-            <label class="TSTpagesLable">#1</label>
-        </button>
-        <button>
-            <label class="TSTpagesLable">#2</label>
-        </button>
-        <button>
-            <label class="TSTpagesLable">#3</label>
-        </button>
-        <button>
-            <label class="TSTpagesLable">#4</label>
-        </button>
-        <button>
-            <label class="TSTpagesLable">#5</label>
-        </button>
-        <button>
-            <label class="TSTpagesLable">#6</label>
-        </button>
-        <button>
-            <label class="TSTpagesLable">#7</label>
-        </button>
-        <button>
-            <label class="TSTpagesLable">#8</label>
-        </button>
-        <button>
-            <label class="TSTpagesLable">#9</label>
-        </button>
-        <button>
-            <label class="TSTpagesLable">#10</label>
-        </button>
-    <div>
+</section>
 </body>
 </html>

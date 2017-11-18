@@ -1,70 +1,129 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-    <meta http-equiv="author" content="Danyil Orel">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta charset="UTF-8">
-    <link href="../Code (CSS)/main.css" rel="stylesheet" type="text/css"/>
+    <meta http-equiv="pragma" content="no-cache ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Main Menu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../vendor/bulma.min.css">
+    <link rel="stylesheet" href="../Code%20(CSS)/styles.css">
+    <link href="../Code (CSS)/main.css" rel="stylesheet" type="text/css"/>
 </head>
-<body id="Body1">
-    <!-- Description of the name of the program -->
-    <div id="MAINdivNameofSite">
-        <label id="MAINllabelNameofSite">Алгоритми сортування та їх аналіз</label>
+<body>
+<section class="section Main">
+    <div class="container is-fluid">
+        <div class="columns">
+            <div class="column Main--form">
+                <div class="Main--logo">
+                    <img class="Main--logo-img" src="../images/icon.png" alt="logo">
+                    <div class="Main--logo-label">
+                        Sorting Algorithms
+                    </div>
+                </div>
+                <form class="Main--login-form" action="index.html" onsubmit="return СheckIt(this);">
+                    <div class="field is-vertical">
+                        <div class="field-label is-normal">
+                            <label class="label">Логін:</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control">
+                                    <input  class="input"
+                                            type="username"
+                                            name="username"
+                                            maxlength="22"
+                                            required="required">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-vertical">
+                        <div class="field-label is-normal">
+                            <label class="label">Пароль:</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control">
+                                    <input  class="input"
+                                            type="password"
+                                            name="password"
+                                            maxlength="22"
+                                            required="required">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column">
+                            <input class="button is-primary" type="submit" value="Авторизуватись">
+
+                        </div>
+                        <div class="column">
+                            <a href="register.html" class="button">Зареєструватись</a>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="column Main--description">
+                <div class="Main--label">
+                    <h1>Алгоритми сортування та їх аналіз</h1>
+                </div>
+                <p>Алгоритми сортування обробляють масиви елементів будь-якого типу. Таке завдання увазі упорядкування елементів масиву в певному порядку. Зазвичай по зростанню і спаданню даних. Впорядкувати набір даних означає переставити елементи в певному порядку так, щоб йшло зростання або убування з кожним кроком.</p>
+
+                <p>Видатні алгоритми сортування даних, розташованих в оперативній пам'яті, надзвичайно різноманітні. Їх аналіз дуже корисний з погляду навчання, оскільки в них використовуються практично всі універсальні прийоми конструювання алгоритмів будь-якої складності.</p>
+            </div>
+        </div>
     </div>
-    <!-- END -->
+</section>
 
-      <!-- Registration + Log In -->
-      <div id="MAINdiv">
-        <!-- Log In, Password -->
-        <script type="text/javascript">
-                function CheckIt(form){
-                  if((form.username.value == "Ossier")&&(form.password.value == "Dan16481657")){
-                    alert("Вхід підтверджено!");
-                    return true;
-                  } else {
-                    alert("Вхід відхилено");
-                    return false;
-                  }
-                }
-              </script>
-        <form id="MAINdivForm1" action="index.html" onsubmit="return СheckIt(this);">
-              <label>Логін:</label><br />
-              <input class="MAINLoginSpace" type="username" name="username" maxlength="22" required="required"><br />
-			        <label>Пароль:</label><br />
-              <input class="MAINLoginSpace" type="password" name="password" maxlength="22" required="required"><br />
-              <input id="LogIN" type="submit" value="Увійти!">
-        </form>
-        <!-- END's here -->
 
-        <!-- Registration button -->
-        <form id="MAINdivForm2" action="register.html">
-            <button id="SignIN">Реєстрація!</button>
-        </form>
-        <!-- END's here -->
-      </div>
-      <!-- END -->
+      <!--&lt;!&ndash; Registration + Log In &ndash;&gt;-->
+      <!--<div id="MAINdiv">-->
+        <!--&lt;!&ndash; Log In, Password &ndash;&gt;-->
+        <!--<script type="text/javascript">-->
+                <!--function CheckIt(form){-->
+                  <!--if((form.username.value == "Ossier")&&(form.password.value == "Dan16481657")){-->
+                    <!--alert("Вхід підтверджено!");-->
+                    <!--return true;-->
+                  <!--} else {-->
+                    <!--alert("Вхід відхилено");-->
+                    <!--return false;-->
+                  <!--}-->
+                <!--}-->
+              <!--</script>-->
 
-    <!-- Language choosing -->
-    <div id="MAINLanguageDIV">
-        <label id="MAINLanguageLabel">Виберіть Мову</label><br />
-        <button id="MAINbuttonImage1"><img src="../images/ukraine.jpg" alt="" width="45px" height="45px"></button>
-        <button id="MAINbuttonImage2"><img src="../images/english.jpg" alt="" width="45px" height="45px"></button>
-    </div>
-    <!-- END -->
+        <!--&lt;!&ndash; END's here &ndash;&gt;-->
 
-    <!-- <form action="index.html" method="post">
-        <p id="MAINComment">
-            <label>Username:</label>
-            <input type="text" name="Username">
-            <label>Vote: Site is Good or Bad?</label>
-            <input type="radio" name="vote">
-                <label>Great!</label>
-            <input type="radio" name="vote">
-                <label>Bad!</label>
-            <textarea name="Comments" rows="5" cols="20">Input your corrections here...</textarea>
-        </p>
-    </form>
-    -->
+        <!--&lt;!&ndash; Registration button &ndash;&gt;-->
+        <!--<form id="MAINdivForm2" action="register.html">-->
+            <!--<button id="SignIN">Реєстрація!</button>-->
+        <!--</form>-->
+        <!--&lt;!&ndash; END's here &ndash;&gt;-->
+      <!--</div>-->
+      <!--&lt;!&ndash; END &ndash;&gt;-->
+
+    <!--&lt;!&ndash; Language choosing &ndash;&gt;-->
+    <!--<div id="MAINLanguageDIV">-->
+        <!--<label id="MAINLanguageLabel">Виберіть Мову</label><br />-->
+        <!--<button id="MAINbuttonImage1"><img src="../images/ukraine.jpg" alt="" width="45px" height="45px"></button>-->
+        <!--<button id="MAINbuttonImage2"><img src="../images/english.jpg" alt="" width="45px" height="45px"></button>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; END &ndash;&gt;-->
+
+    <!--&lt;!&ndash; <form action="index.html" method="post">-->
+        <!--<p id="MAINComment">-->
+            <!--<label>Username:</label>-->
+            <!--<input type="text" name="Username">-->
+            <!--<label>Vote: Site is Good or Bad?</label>-->
+            <!--<input type="radio" name="vote">-->
+                <!--<label>Great!</label>-->
+            <!--<input type="radio" name="vote">-->
+                <!--<label>Bad!</label>-->
+            <!--<textarea name="Comments" rows="5" cols="20">Input your corrections here...</textarea>-->
+        <!--</p>-->
+    <!--</form>-->
+    <!--&ndash;&gt;-->
 </body>
 </html>

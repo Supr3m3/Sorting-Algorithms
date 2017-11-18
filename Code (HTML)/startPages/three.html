@@ -1,84 +1,98 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-    <title>Three!</title>
-    <link href="../../Code (CSS)/start_pages/one.css" rel="stylesheet" type="text/css"/>
+    <meta http-equiv="pragma" content="no-cache ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../vendor/bulma.min.css">
+    <link rel="stylesheet" href="../../Code%20(CSS)/styles.css">
+    <link href="../../Code (CSS)/startPages/allPages.css" rel="stylesheet" type="text/css"/>
 </head>
-<body class="Body">
+<body>
+<selection>
+    <div class="container is-fluid">
+        <div class="columns">
+            <div class="column is-3 All--Menu">
+                    <aside class="menu">
+                      <p class="menu-label">
+                        <span class="tag is-black is-large">
+                            Алгоритми сортування
+                        </span>
+                       </p>
+                        <ul class="menu-list">
+                          <div class="column All--list">
+                              <!-- 1 -->
+                              <li><a href="one.html" class="button is-white All--list__buttons">Bubble Sort</a></li>
+                              <!-- 2 -->
+                              <li><a href="two.html" class="button is-white All--list__buttons">Insertion Sort</a></li>
+                              <!-- 3 -->
+                              <li><a class="is-active All--list__buttons" aria-current="page">Quick Sort</a></li>
+                              <!-- 4 -->
+                              <li><a href="four.html" class="button is-white All--list__buttons">Merge Sort</a></li>
+                              <!-- 5 -->
+                              <li><a href="five.html" class="button is-white All--list__buttons">Smooth Sort</a></li>
+                              <!-- 6 -->
+                              <li><a href="six.html" class="button is-white All--list__buttons">Selection Sort</a></li>
+                              <!-- 7 -->
+                              <li><a href="seven.html" class="button is-white All--list__buttons">Pyramid Sort</a></li>
+                              <!-- 8 -->
+                              <li><a href="eight.html" class="button is-white All--list__buttons">Bucket Sort</a></li>
+                              <!-- 9 -->
+                              <li><a href="nine.html" class="button is-white All--list__buttons">Shell Sort</a></li>
+                              <!-- 10 -->
+                              <li><a href="ten.html" class="button is-white All--list__buttons">Random Sort</a></li>
+                            </div>
+                          </ul>
+                    </aside>
+                    <div class="column">
+                        <a href="../start.html" class="button is-primary">Повернутися!</a>
+                    </div>
+            </div>
+            <div class="column is-9 All--Menu">
+              <div class="columns">
+                <div class="content">
+                  <div class="column is-9">
+                    <div class="content">
+                      <p class="All--description">Сортування швидке
+                      </p>
+                      <p class="All--description">
+                        Алгоритм Quick Sort є одним з найшвидших алгоритмів сортування. Його середній час виконання - O (n log n). Quick Sort реалізується за допомогою рекурсії.
+                        У цій статті представлений демонстраційний приклад алгоритму швидкого сортування на Java.
+                        Суть алгоритму полягає в наступному. Береться певний елемент масиву (бажано Рандома, щоб алгоритм виконувався приблизно однакові проміжки часу для будь-яких наборів даних). Елементи, які знаходяться зліва і більше за значенням ніж початковий, міняються місцями з елементами, які знаходяться праворуч і менше початкового. Аналогічна операція виконується для наборів даних зліва і праворуч від початкового. І так далі по рекурсії.
+                      </p>
+                      <div class="columns is-parental">
+                        <div class="column">
+                          <pre style="width: 350px; height:250px;">
+                            <div class="box All--code" style="width: 300px;">
+                               <p class="subtitle">C++</p>
 
-  <!-- Here is the text of the first of Sorting Algorithms - Bubble Sorting-->
-  <div id="STRdiv">
-
-
-  </div>
-  <!-- END -->
-
-  <!-- Two buutons for returning and going on. They're on the bottom-->
-  <form action="two.html">
-      <button id="STRdoubleButtonReturn">
-        <label id="STRdoubleLabelReturn">Повернутися!</label>
-      </button>
-  </form>
-
-   <form action="four.html">
-      <button id="STRdoubleButtonNext">
-        <label id="STRdoubleLabelNext">Наступна!</label>
-      </button>
-  </form>
-
-  <!-- This is the line in the bottom-->
-  <div class="STRpages">
-        <form action="start_pages/one.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#1</label>
-            </button>
-        </form>
-    <form action="start_pages/two.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#2</label>
-            </button>
-        </form>
-        <form action="start_pages/three.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#3</label>
-            </button>
-        </form>
-        <form action="start_pages/four.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#4</label>
-            </button>
-        </form>
-        <form action="start_pages/five.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#5</label>
-            </button>
-        </form>
-        <form action="start_pages/six.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#6</label>
-            </button>
-        </form>
-        <form action="start_pages/seven.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#7</label>
-            </button>
-        </form>
-        <form action="start_pages/eight.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#8</label>
-            </button>
-        </form>
-        <form action="start_pages/nine.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#9</label>
-            </button>
-        </form>
-        <form action="start_pages/ten.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#10</label>
-            </button>
-        </form>
-
-  <div>
+                            </div>
+                          </pre>
+                        </div>
+                        <div class="column">
+                          <pre style="width: 350px; height:250px;">
+                            <div class="box All--code" style="width: 300px;">
+                               <p class="subtitle">Java Script</p>
+                                for(j = 0; j < n - 1; j++){
+                                  for(i = 0; i < n - 1; i++){
+                                    if (arr[i] > arr[i + 1]) {
+                                    tmp = arr[i];
+                                    arr[i] = arr[i + 1];
+                                    arr[i + 1] = tmp;
+                                    }
+                                  }
+                                }
+                            </div>
+                          </pre>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</selection>
 </body>
 </html>

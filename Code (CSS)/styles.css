@@ -1,8 +1,14 @@
-.Body{
-    background-image: url(../images/main4.jpg);
-    text-align: center;
+html {
+    height: 100%;
 }
 
-a{
-    color: #68FFFF;
+body {
+    background-image: url(../images/theme.jpg);
+    text-align: center;
+    color: #fff;
+}
+
+label.label {
+    color: #fff;
+    font-style:
 }

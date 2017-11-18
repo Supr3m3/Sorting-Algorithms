@@ -1,84 +1,100 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-    <title>Six!</title>
-    <link href="../../Code (CSS)/start_pages/one.css" rel="stylesheet" type="text/css"/>
+    <meta http-equiv="pragma" content="no-cache ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../vendor/bulma.min.css">
+    <link rel="stylesheet" href="../../Code%20(CSS)/styles.css">
+    <link href="../../Code (CSS)/startPages/allPages.css" rel="stylesheet" type="text/css"/>
 </head>
-<body class="Body">
-
-  <!-- Here is the text of the first of Sorting Algorithms - Bubble Sorting-->
-  <div id="STRdiv">
-
-
-  </div>
-  <!-- END -->
-
-  <!-- Two buutons for returning and going on. They're on the bottom-->
-  <form action="five.html">
-      <button id="STRdoubleButtonReturn">
-        <label id="STRdoubleLabelReturn">Повернутися!</label>
-      </button>
-  </form>
-
-   <form action="seven.html">
-      <button id="STRdoubleButtonNext">
-        <label id="STRdoubleLabelNext">Наступна!</label>
-      </button>
-  </form>
-
-  <!-- This is the line in the bottom-->
-  <div class="STRpages">
-        <form action="start_pages/one.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#1</label>
-            </button>
-        </form>
-    <form action="start_pages/two.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#2</label>
-            </button>
-        </form>
-        <form action="start_pages/three.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#3</label>
-            </button>
-        </form>
-        <form action="start_pages/four.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#4</label>
-            </button>
-        </form>
-        <form action="start_pages/five.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#5</label>
-            </button>
-        </form>
-        <form action="start_pages/six.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#6</label>
-            </button>
-        </form>
-        <form action="start_pages/seven.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#7</label>
-            </button>
-        </form>
-        <form action="start_pages/eight.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#8</label>
-            </button>
-        </form>
-        <form action="start_pages/nine.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#9</label>
-            </button>
-        </form>
-        <form action="start_pages/ten.html" class="STRpagesContole">
-            <button>
-                <label class="STRpagesLable">#10</label>
-            </button>
-        </form>
-
-  <div>
+<body>
+<selection>
+    <div class="container is-fluid">
+        <div class="columns">
+            <div class="column is-3 All--Menu">
+                    <aside class="menu">
+                      <p class="menu-label">
+                        <span class="tag is-black is-large">
+                            Алгоритми сортування
+                        </span>
+                       </p>
+                        <ul class="menu-list">
+                          <div class="column All--list">
+                              <!-- 1 -->
+                              <li><a href="one.html" class="button is-white All--list__buttons">Bubble Sort</a></li>
+                              <!-- 2 -->
+                              <li><a href="two.html" class="button is-white All--list__buttons">Insertion Sort</a></li>
+                              <!-- 3 -->
+                              <li><a href="three.html" class="button is-white All--list__buttons">Quick Sort</a></li>
+                              <!-- 4 -->
+                              <li><a href="four.html" class="button is-white All--list__buttons">Merge Sort</a></li>
+                              <!-- 5 -->
+                              <li><a href="five.html" class="button is-white All--list__buttons">Smooth Sort</a></li>
+                              <!-- 6 -->
+                              <li><a class="is-active All--list__buttons" id="All--list__activeButton" aria-current="page">Selection Sort</a></li>
+                              <!-- 7 -->
+                              <li><a href="seven.html" class="button is-white All--list__buttons">Pyramid Sort</a></li>
+                              <!-- 8 -->
+                              <li><a href="eight.html" class="button is-white All--list__buttons">Bucket Sort</a></li>
+                              <!-- 9 -->
+                              <li><a href="nine.html" class="button is-white All--list__buttons">Shell Sort</a></li>
+                              <!-- 10 -->
+                              <li><a href="ten.html" class="button is-white All--list__buttons">Random Sort</a></li>
+                            </div>
+                          </ul>
+                    </aside>
+                    <div class="column">
+                        <a href="../start.html" class="button is-primary">Повернутися!</a>
+                    </div>
+            </div>
+            <div class="column is-9 All--Menu">
+              <div class="columns">
+                <div class="content">
+                  <div class="column is-9">
+                    <div class="content">
+                      <p class="All--description">Сортування вибором
+                      </p>
+                      <p class="All--description">
+                        Завдання полягає в наступному: є частина масиву, яка вже відсортована, і потрібно вставити інші елементи масиву в відсортовану частину, зберігши при цьому впорядкованість. Для цього на кожному кроці алгоритму ми вибираємо один з елементів вхідних даних і вставляємо його на потрібну позицію в уже відсортованої частини масиву, до тих пір поки весь набір вхідних даних не буде відсортований. Метод вибору чергового елементу з початкового масиву довільний, проте зазвичай (і з метою отримання стійкого алгоритму сортування), елементи вставляються по порядку їх появи у вхідному масиві.
+                        Так як в процесі роботи алгоритму можуть мінятися місцями тільки сусідні елементи, кожен обмін зменшує число інверсій на одиницю. Отже, кількість обмінів дорівнює кількості інверсій в вихідному масиві незалежно від реалізації сортування. Максимальна кількість інверсій міститься в масиві, елементи якого відсортовані по незростання. Число інверсій в такому масиві.
+                        Алгоритм працює за O (n + k), де k - число обмінів елементів вхідного масиву, яка дорівнює кількості інверсій. В середньому і в гіршому випадку - за O (n<sup>2</sup>). Мінімальні оцінки зустрічаються в разі вже впорядкованої вихідної послідовності елементів, найгірші - коли вони розташовані в зворотному порядку.
+                      </p>
+                      <div class="columns is-parental">
+                        <div class="column">
+                          <pre style="width: 350px; height:250px;">
+                            <div class="box All--code" style="width: 300px;">
+                               <p class="subtitle">C++</p>
+                                function insertionSort(a):
+                                for i = 1 to n - 1
+                                  j = i - 1
+                                  while (j < 0) and (a[j] > a[j + 1])
+                                    swap(a[j], a[j + 1])
+                                    j--
+                            </div>
+                          </pre>
+                        </div>
+                        <div class="column">
+                          <pre style="width: 350px; height:250px;">
+                            <div class="box All--code" style="width: 300px;">
+                               <p class="subtitle">Java Script</p>
+                                function insertionSort(a):
+                                for i = 1 to n - 1
+                                  j = i - 1
+                                  k = binSearch(a, a[i], 0, j)
+                                  for m = j downto k
+                                    swap(a[m], a[m+1])
+                            </div>
+                          </pre>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</selection>
 </body>
 </html>

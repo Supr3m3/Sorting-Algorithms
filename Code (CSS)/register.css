@@ -1,94 +1,56 @@
-body{
-	background-image: url(../images/../images/theme.jpg);
+.Reg {
+    height: auto;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Button, which returns to main.html */
-#REGbutton{
+.Reg .Reg--form {
+    margin: auto;
+}
+
+.Reg--Menu{
+    max-width: 600px;
+    max-height: 700px;
+    margin: auto;
+}
+
+#Reg--Menu__id{
+    margin-top: 100px;
+}
+
+.Reg--form__buttons{
+    position: absolute;
+    margin-top: 23%;
+    margin-left: 5%;
+}
+
+.Reg--form .button {
+    margin-top: 10px;
+}
+
+.Reg--description{
     text-align: center;
-    width: 175px;
-    margin-left: 85%;
-    margin-top: 20px;
-    border-radius: 10px;
-    border: 5px solid #F76FAF;
-    color: #000000;
-    opacity: 0.8;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 24;
-}
-
-#REGbutton:hover{
-    transform: scale(1.1);
-    transition: 1.0s transform;
-    opacity: 1;
-}
-/* END */
-
-/* Field with registrating */
-#REGfield{
-    width: 480px;
-    height: 290 px;
-    background-color: #FFD8D8;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-legend{
-    font-size: 32px;
-    color: #000000;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-}
-/* END */
-
-/* Input particularities */
-.REGinputTypes{
-    width: 20px;
-    height: 25px;
-    margin-top: 4px;
+    margin-top: 5%;
+    margin-left: 5%;
     font-size: 18px;
-    size: 21;
-    border-radius: 5px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-.REGinputTypes:hover{
-    transition: 0.0s background-color;
-    background-color: #EFEFEF;
-    width: 200px;
-}
-/* END */
-
-/* Lables on the field */
-.REGfieldLable{
-    font-size: 24px;
-    color: #000000;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+.Reg-label {
+    font-size: 18px;
 }
 
-#REGselection{
-    font-family: "Comic Sans MS", cursive, sans-serif;
-}
-/* END */
-
-/* Confirm registration button */
-.REGok{
-    text-align: center;
-    width: 110px;
-    margin-top: 6px;
-    border-radius: 10px;
-    border: 5px solid #F76FAF;
-    color: #000000;
-    opacity: 0.8;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 16px;
+.Reg--logo {
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-.REGok:hover{
-    transform: scale(1.1);
-    transition: 1.5s transform;
-    background-color: #F76FAF;
+.Reg--logo .Reg--logo-label {
+    font-size: 25px;
 }
 
-#REGshowButton{
-    margin-left: 5px;
+
+.Reg--logo .Reg--logo-img {
+    height: 100px;
 }
-/* END */

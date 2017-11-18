@@ -1,58 +1,33 @@
-.Body{
-    background-image: url(../images/theme.jpg);
-    text-align: center;
+.Index {
+    height: auto;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#INDButton1{
-    text-align: center;
-    width: 220px;
-    margin-top: 65px;
-    border-radius: 10px;
-    border: 5px solid #FF0077;
-    color: #000000;
-    opacity: 0.8;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 32;
+.Index .Index--form {
+    margin: auto;
 }
 
-#INDButton1:hover{
-    transform: scale(1.1);
-    transition: 1.0s transform;
-    opacity: 1;
+.Index--Menu{
+    margin-top: 5%;
+    margin-left: 5%;
 }
 
-#INDButton2{
-    text-align: center;
-    width: 150px;
-    margin-left: 86%;
-    margin-top: 20px;
-    border-radius: 10px;
-    border: 5px solid #FF0077;
-    color: #000000;
-    opacity: 0.9;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 28;
-}
-#INDButton2:hover{
-    transform: scale(1.1);
-    transition: 1.0s transform;
-    opacity: 1;
+.Index--form__buttons{
+    position: absolute;
+    margin-top: 23%;
+    margin-left: 5%;
 }
 
-#INDButton{
-    text-align: center;
-    width: 220px;
+.Index--form .button {
     margin-top: 10px;
-    border-radius: 10px;
-    border: 5px solid #FF0077;
-    color: #000000;
-    opacity: 0.8;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 32;
 }
 
-#INDButton:hover{
-    transform: scale(1.1);
-    transition: 1.0s transform;
-    opacity: 1;
+.Index--description{
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: 18px;
 }

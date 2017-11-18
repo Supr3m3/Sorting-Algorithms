@@ -1,35 +1,141 @@
 <html>
-	<head>
-		<title>Register</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="pragma" content= "no-cache ">
-		<link href="../Code (CSS)/register.css" rel="stylesheet" type="text/css" />
-	</head>
-	<body>
-         <form action="main.html">
-            <button id="REGbutton">Повернутися!</button>
-         </form>
-         <fieldset id="REGfield">
-            <legend>Реєстрація</legend>
-            <form action="main.html" onsubmit="return checkForm(this);">
-                <label class="REGfieldLable">Введіть Ваше ім'я: </label>
-                <input class="REGinputTypes" type="text" name="Name" required="required"><br />
-                <label class="REGfieldLable">Введіть Ваше прізвище: </label>
-                <input class="REGinputTypes" type="text" name="Surname" required="required"><br />
-                <label class="REGfieldLable">Стать: </label>
-                <select id="REGselection" name="Gender" required="required">
-                    <option value="Male">Чоловіча</option>
-                    <option value="Female">Жіноча</option>
-                </select> <br />
-                <label class="REGfieldLable">Введіть логін: </label>
-                <input class="REGinputTypes" type="username" name="username" required="required"><br />
-                <label class="REGfieldLable">Введіть пароль: </label>
-                <input class="REGinputTypes" type="password" name="password1" required="required"><br />
-                <label class="REGfieldLable">Введіть пароль ще раз: </label>
-                <input class="REGinputTypes" type="password" name="password2" required="required"><br />
-                <input class="REGok" type="submit" value="Завершити">
-                <button class="REGok" id="REGshowButton">ShowAll</button>
-            </form>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../vendor/bulma.min.css">
+    <link rel="stylesheet" href="../Code%20(CSS)/styles.css">
+    <link href="../Code (CSS)/register.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<section>
+    <div class="container is-fluid">
+        <div class="columns">
+            <div class="column">
+                <div class="Reg--logo">
+                    <img class="Reg--logo-img" src="../images/icon.png" alt="logo">
+                    <div class="Reg--logo-label">
+                        Sorting Algorithms
+                    </div>
+                </div>
+                <div class="box Reg--Menu">
+                    <h1>Як зареєструватися на сайті?</h1>
+                    <p>У вікні, що вікрилось, виберіть вкладку «Name». Вкажіть Ваше ім'я.
+                    <p>Наступна вкладка - «Username». У ній необхідно вказати Ваше прізвисько, яке Ви використовуєте в інтернеті.
+                    </p>
+                    <p>У вкладці Email вкажіть вашу електронну адресу (ukr.net, mail.ru, gmail.com і так далі).
+                    </p>
+                    <p>Наступна вкладка "Password" - введення паролю. Отож, для того щоб вибрати стійкий пароль, необхідно:
+                    <ul>
+                        <li>Вказати пароль не менше 6 символів</li>
+                        <li>Ввести пароль хоча б із однією літерою вищого регістра</li>
+                        <li>Комбінувати пароль із літерами та цифрами</li>
+                    </ul>
+                    Якщо Ви не дотримаєтесь цих правил реєстрації, запит на підтвердження Вашого нестійкого пароля буде відхилено.
+                    <p>
+                        Наступна Вкладка це підтвердження Вашого нового пароля. Він повинен співпадати з паролем, що ви ввели у минулій вкладці ( Password ).
+                    </p>
+                    <p>
+                        У вкладці "Message" залиште будь-ласка відгуки про незручність користування даним сайтом, якшо така є. Ми будемо вдячні Вам за вказані помилки чи некоректності.
+                    </p>
+                    </p><br />
+                    <p>Про реєстрацію на сайті дізнайтеся більше на сайті:
+                        <a href="https://tickets.ua/uk/content/registration-and-authorization.html">https://tickets.ua/uk/content/registration-and-authorization.html</a>
+                    </p>
+                </div>
+                <a href="main.html" class="button is-white">Повернутись в головне меню</a>
+            </div>
+            <div class="column is-5">
+                <div class="box Reg--Menu" id="Reg--Menu__id">
+                     <div class="field">
+                      <label class="Reg--label">Name</label>
+                      <div class="control">
+                        <input class="input" type="text" placeholder="Enter your Name">
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label class="Reg--label">Username</label>
+                      <div class="control has-icons-left has-icons-right">
+                        <input class="input is-success" type="text" placeholder="Input your Username" value="">
+                        <span class="icon is-small is-left">
+                          <i class="fa fa-user"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                          <i class="fa fa-check"></i>
+                        </span>
+                      </div>
+                      <p class="help is-success">This username is available</p>
+                    </div>
+
+                    <div class="field">
+                      <label class="Reg--label">Email</label>
+                      <div class="control has-icons-left has-icons-right">
+                        <input class="input is-danger" type="email" placeholder="Enter your Email" value="">
+                        <span class="icon is-small is-left">
+                          <i class="fa fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                          <i class="fa fa-warning"></i>
+                        </span>
+                      </div>
+                      <p class="help is-danger">This email is invalid</p>
+                    </div>
+
+                    <div class="field">
+                      <label class="Reg--label">Password</label>
+                      <div class="control">
+                        <input class="input" type="text" placeholder="Input Password">
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label class="Reg--label">Confirm</label>
+                      <div class="control">
+                        <input class="input" type="text" placeholder="Confirmation">
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label class="Reg--label">Message</label>
+                      <div class="control">
+                        <textarea class="textarea" placeholder="Input your thoughts about this site here..."></textarea>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <div class="control">
+                          I agree to the <a href="#">terms and conditions</a>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <div class="control">
+                        <label class="radio">
+                          <input type="radio" name="question">
+                          Yes
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="question">
+                          No
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="field is-grouped">
+                      <div class="control">
+                        <button class="button is-link">Submit</button>
+                      </div>
+                      <div class="control">
+                        <button class="button is-text">Cancel</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
             <script type="text/javascript">
                 function checkForm(form)
                     {
@@ -84,6 +190,7 @@
                     return true;
                     }
             </script>
-        </fieldset>
-	</body>
+    </div>
+<section>
+</body>
 </html>
