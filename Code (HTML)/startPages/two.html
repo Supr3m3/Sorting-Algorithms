@@ -13,8 +13,9 @@
 <selection>
     <div class="container is-fluid">
         <div class="columns">
-            <div class="column is-3 All--Menu">
-                    <aside class="menu">
+            <div class="column All--Menu">
+                    <a href="../start.html" class="button is-primary">Повернутися!</a>
+                    <aside class="menu All--Menu__list">
                       <p class="menu-label">
                         <span class="tag is-black is-large">
                             Алгоритми сортування
@@ -45,14 +46,11 @@
                             </div>
                           </ul>
                     </aside>
-                    <div class="column">
-                        <a href="../start.html" class="button is-primary">Повернутися!</a>
-                    </div>
             </div>
-            <div class="column is-9 All--Menu">
+            <div class="column is-8 All--Menu">
               <div class="columns">
                 <div class="content">
-                  <div class="column is-9">
+                  <div class="column">
                     <div class="content">
                       <p class="All--description">Сортування вставкою
                       </p>
@@ -63,42 +61,32 @@
                       </p>
                       <div class="columns is-parental">
                         <div class="column">
-                          <pre style="width: 350px; height:250px;">
-                            <div class="box All--code" style="width: 300px;">
+                            <div class="box All--code">
                                <p class="subtitle">C++</p>
-                                void Sort(int* arr, int n){
-                                int counter=0;
-                                for(int i = 1; i < n ; i++){
-                                  for(int j=i; j > 0; arr[j-1] > arr[j] ; j--){
-                                    counter++;
-                                    int tmp = arr[j - 1];
-                                    arr[j - 1] = arr[j];
-                                    arr[j] = tmp;
-                                  }
-                                }
-                                cout << counter << endl
-                                }
+                                void Sort(int* arr, int n)<br />
+                                  int counter=0;<br />
+                                  for(int i = 1; i < n ; i++)<br />
+                                    for(int j=i; j > 0; arr[j-1] > arr[j] ; j--)<br />
+                                      counter++;<br />
+                                      int tmp = arr[j - 1];<br />
+                                      arr[j - 1] = arr[j];<br />
+                                      arr[j] = tmp;<br />
+                                  cout << counter << endl<br />
                             </div>
-                          </pre>
                         </div>
                         <div class="column">
-                          <pre style="width: 350px; height:250px;">
-                            <div class="box All--code" style="width: 300px;">
+                            <div class="box All--code">
                                <p class="subtitle">Java Script</p>
-                                void Sort(int* arr, int n){
-                                int counter=0;
-                                for(int i = 1; i < n ; i++){
-                                  for(int j=i; j > 0; arr[j-1] > arr[j] ; j--){
-                                    counter++;
-                                    int tmp = arr[j - 1];
-                                    arr[j - 1] = arr[j];
-                                    arr[j] = tmp;
-                                  }
-                                }
-                                cout << counter << endl
-                                }
+                                void Sort(int* arr, int n)<br />
+                                  int counter=0;<br />
+                                  for(int i = 1; i < n ; i++)<br />
+                                    for(int j=i; j > 0; arr[j-1] > arr[j] ; j--)<br />
+                                      counter++;<br />
+                                      int tmp = arr[j - 1];<br />
+                                      arr[j - 1] = arr[j];<br />
+                                      arr[j] = tmp;<br />
+                                  cout << counter << endl;<br />
                             </div>
-                          </pre>
                         </div>
                       </div>
                   </div>

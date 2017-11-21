@@ -11,20 +11,15 @@
 }
 
 .All--Menu{
-    margin-top: 5%;
-}
-
-.All--form__buttons{
-    margin-top: 1%;
-}
-
-.All--list{
-    margin-left: 70px;
+    margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .All--list__buttons{
     width: 200px;
-    margin-top: 2px;
+    margin-top: 5px;
+    margin: auto;
 }
 
 .All--label {
@@ -34,16 +29,24 @@
 }
 
 .All--form .button {
-    margin-top: 2px;
+    margin-top: 5px;
     position: absolute;
 }
 
 .All--description{
     font-size: 18px;
+    text-align: justify;
 }
 
 .All-code{
-    width: 200px;
-    margin-right: 300px;
     text-align: justify;
+    margin: auto;
+    font-size: 20px;
+    max-width: 100px;
+    max-height: 200px;
+}
+
+.All--Menu__list{
+    margin: auto;
+    margin-top: 20px;
 }

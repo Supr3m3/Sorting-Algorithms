@@ -6,40 +6,22 @@
     align-items: center;
 }
 
-.Index .Index--form {
+.Info .Info--form {
     margin: auto;
 }
 
-.Index--Menu{
-    margin-top: 10%;
-    margin-left: 10%;
-}
-
-.Index--form__buttons{
-    position: absolute;
-    margin-top: 27%;
-    margin-left: 5%;
-}
-
-.Index--form .button {
-    margin-top: 10px;
-}
-
-.Index--description{
+.Info--description{
     text-align: center;
-    margin-top: 5%;
-    margin-left: 10%;
+    margin: auto;
     font-size: 18px;
+    max-width: 400px;
 }
 
-.Info--control{
-    justify-content: center;
-    align-items: center;
+.Info--button__Return{
     margin: auto;
-    margin-top: 15%;
-    font-size: 24px;
+    margin-top: 2%;
 }
 
-.Info--button_Return{
-    margin: auto;
+.Info--box{
+    margin-top: 1%;
 }

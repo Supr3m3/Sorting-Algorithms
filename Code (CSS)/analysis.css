@@ -12,12 +12,8 @@
 }
 
 .Anl--Menu{
-    margin-top: 8%;
+    margin-top: 7%;
 	margin-left: 5%;
-}
-
-.Anl--form__buttons{
-    margin-top: 1%;
 }
 
 .Anl--list{
@@ -33,12 +29,6 @@
     font-size: 18px;
     color: white;
     text-align: center;
-}
-
-.Anl--form__buttons {
-    margin-top: 23%;
-	margin-left: 3.5%;
-    position: absolute;
 }
 
 .Anl--description{
