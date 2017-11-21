@@ -1,0 +1,52 @@
+.All {
+    height: auto;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.All .All--form {
+    margin: auto;
+}
+
+.All--Menu{
+    margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.All--list__buttons{
+    width: 200px;
+    margin-top: 5px;
+    margin: auto;
+}
+
+.All--label {
+    font-size: 18px;
+    color: white;
+    text-align: justify;
+}
+
+.All--form .button {
+    margin-top: 5px;
+    position: absolute;
+}
+
+.All--description{
+    font-size: 18px;
+    text-align: justify;
+}
+
+.All-code{
+    text-align: justify;
+    margin: auto;
+    font-size: 20px;
+    max-width: 100px;
+    max-height: 200px;
+}
+
+.All--Menu__list{
+    margin: auto;
+    margin-top: 20px;
+}

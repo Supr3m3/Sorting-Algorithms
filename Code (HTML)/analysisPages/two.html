@@ -1,0 +1,100 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../vendor/bulma.min.css">
+    <link rel="stylesheet" href="../../Code%20(CSS)/styles.css">
+    <link href="../../Code (CSS)/startPages/allPages.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<selection>
+    <div class="container is-fluid">
+        <div class="columns">
+            <div class="column All--Menu">
+                    <a href="../start.html" class="button is-primary">Повернутися!</a>
+                    <aside class="menu All--Menu__list">
+                      <p class="menu-label">
+                        <span class="tag is-black is-large">
+                            Алгоритми сортування
+                        </span>
+                       </p>
+                        <ul class="menu-list">
+                          <div class="column All--list">
+                              <!-- 1 -->
+                              <li><a href="one.html" class="button is-white All--list__buttons">Bubble Sort</a></li>
+                              <!-- 2 -->
+                              <li><a class="is-active All--list__buttons aria-current="page"">Insertion Sort</a></li>
+                              <!-- 3 -->
+                              <li><a href="three.html" class="button is-white All--list__buttons">Quick Sort</a></li>
+                              <!-- 4 -->
+                              <li><a href="four.html" class="button is-white All--list__buttons">Merge Sort</a></li>
+                              <!-- 5 -->
+                              <li><a href="five.html" class="button is-white All--list__buttons">Smooth Sort</a></li>
+                              <!-- 6 -->
+                              <li><a href="six.html" class="button is-white All--list__buttons">Selection Sort</a></li>
+                              <!-- 7 -->
+                              <li><a href="seven.html" class="button is-white All--list__buttons">Pyramid Sort</a></li>
+                              <!-- 8 -->
+                              <li><a href="eight.html" class="button is-white All--list__buttons">Bucket Sort</a></li>
+                              <!-- 9 -->
+                              <li><a href="nine.html" class="button is-white All--list__buttons">Shell Sort</a></li>
+                              <!-- 10 -->
+                              <li><a href="ten.html" class="button is-white All--list__buttons">Random Sort</a></li>
+                            </div>
+                          </ul>
+                    </aside>
+            </div>
+            <div class="column is-8 All--Menu">
+              <div class="columns">
+                <div class="content">
+                  <div class="column">
+                    <div class="content">
+                      <p class="All--description">Сортування вставкою
+                      </p>
+                      <p class="All--description">
+                      Сортування вставками – досить простий алгоритм. Як в і будь-якому іншому алгоритмі сортування, зі збільшенням розміру сортованого масиву збільшується і час сортування. Основною перевагою алгоритму сортування вставками є можливість сортувати масив по мірі його отримання.То тобто маючи частина масиву, можна починати його сортувати. У паралельному програмування така особливість відіграє не останню роль.
+                      Його середній час виконання - О(n²)
+                      Сортований масив можна розділити на дві частини – відсортована частина і невідсортовані. На початку сортування перший елемент масиву вважається відсортованим, всі інші – НЕ відсортовані. Починаючи з другого елемента масиву і закінчуючи останнім, алгоритм вставляє невідсортоване елемент масиву в потрібну позицію у відсортованій частині масиву. Таким чином, за один крок сортування відсортована частина масиву збільшується на один елемент, а невідсортовані частина масиву зменшується на один елемент.
+                      </p>
+                      <div class="columns is-parental">
+                        <div class="column">
+                            <div class="box All--code">
+                               <p class="subtitle">C++</p>
+                                void Sort(int* arr, int n)<br />
+                                  int counter=0;<br />
+                                  for(int i = 1; i < n ; i++)<br />
+                                    for(int j=i; j > 0; arr[j-1] > arr[j] ; j--)<br />
+                                      counter++;<br />
+                                      int tmp = arr[j - 1];<br />
+                                      arr[j - 1] = arr[j];<br />
+                                      arr[j] = tmp;<br />
+                                  cout << counter << endl<br />
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="box All--code">
+                               <p class="subtitle">Java Script</p>
+                                void Sort(int* arr, int n)<br />
+                                  int counter=0;<br />
+                                  for(int i = 1; i < n ; i++)<br />
+                                    for(int j=i; j > 0; arr[j-1] > arr[j] ; j--)<br />
+                                      counter++;<br />
+                                      int tmp = arr[j - 1];<br />
+                                      arr[j - 1] = arr[j];<br />
+                                      arr[j] = tmp;<br />
+                                  cout << counter << endl;<br />
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</selection>
+</body>
+</html>
