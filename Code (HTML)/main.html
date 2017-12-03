@@ -49,11 +49,25 @@
                                             type="password"
                                             name="password"
                                             maxlength="22"
-                                            required="required">
+                                            required="required"
+                                            onclick="checkPassword()"
+                                            >
                                 </p>
                             </div>
                         </div>
                     </div>
+
+                    <script type="text/javascript">
+                        function checkPassword(){
+                            var password = document.getElementById("password").value;
+                            if(password == "16481657"){
+                                return true;
+                            } else {
+                                return false;
+                            }
+                        }
+                    </script>
+
                     <div class="columns">
                         <div class="column">
                             <input class="button is-primary" type="submit" value="Авторизуватись">

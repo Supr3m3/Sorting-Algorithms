@@ -47,7 +47,7 @@
                 </div>
                 <a href="main.html" class="button is-white">Повернутись в головне меню</a>
             </div>
-            <div class="column is-5">
+            <div class="column is-6">
                 <div class="box Reg--Menu" id="Reg--Menu__id">
                      <div class="field">
                       <label class="Reg--label">Name</label>
@@ -59,7 +59,7 @@
                     <div class="field">
                       <label class="Reg--label">Username</label>
                       <div class="control has-icons-left has-icons-right">
-                        <input class="input is-success" type="text" placeholder="Input your Username" value="">
+                        <input id="userName" class="input is-success" type="text" placeholder="Input your Username" value="">
                         <span class="icon is-small is-left">
                           <i class="fa fa-user"></i>
                         </span>
@@ -87,14 +87,14 @@
                     <div class="field">
                       <label class="Reg--label">Password</label>
                       <div class="control">
-                        <input class="input" type="text" placeholder="Input Password">
+                        <input id="passWord1" class="input" type="text" placeholder="Input Password">
                       </div>
                     </div>
 
                     <div class="field">
                       <label class="Reg--label">Confirm</label>
                       <div class="control">
-                        <input class="input" type="text" placeholder="Confirmation">
+                        <input id="passWord2" class="input" type="text" placeholder="Confirmation">
                       </div>
                     </div>
 
@@ -126,7 +126,7 @@
 
                     <div class="field is-grouped">
                       <div class="control">
-                        <a href="main.html" class="button is-link">Submit</a>
+                        <a href="main.html" class="button is-link" onClick="checkForm()">Submit</a>
                       </div>
                       <div class="control">
                         <a href="main.html" class="button is-text">Cancel</a>
@@ -136,9 +136,12 @@
             </div>
         </div>
 
-             <script type="text/javascript">
+            <script type="text/javascript">
                 function checkForm(form)
                     {
+                      var username = document.getElementById("userName").value;
+                      var password1 = document.getElementById("passWord1").value;
+                      var password2 = document.getElementById("passWord2").value;
                     if(form.username.value == "") {
                     alert("Error: Username cannot be blank!");
                     form.username.focus();
