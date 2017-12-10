@@ -10,13 +10,20 @@
     margin: auto;
 }
 
-.All--Menu{
+.All--Menu {
     margin-top: 7%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.All--list__buttons{
+.All--Menu2 {
+    margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+.All--list__buttons {
     width: 200px;
     margin-top: 5px;
     margin: auto;
@@ -33,12 +40,12 @@
     position: absolute;
 }
 
-.All--description{
+.All--description {
     font-size: 18px;
     text-align: justify;
 }
 
-.All-code{
+.All-code {
     text-align: justify;
     margin: auto;
     font-size: 20px;
@@ -46,7 +53,11 @@
     max-height: 200px;
 }
 
-.All--Menu__list{
+.All--Menu__list {
     margin: auto;
     margin-top: 20px;
+}
+
+.Test--text__answers {
+    width: 10px;
 }

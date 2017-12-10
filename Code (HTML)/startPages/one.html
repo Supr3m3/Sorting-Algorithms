@@ -6,7 +6,9 @@
     <title>Sorting Algorithms</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../vendor/bulma.min.css">
+    <link href="../../vendor/prism.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../../Code%20(CSS)/styles.css">
+    <script src="../../vendor/prism.js"></script>
     <link href="../../Code (CSS)/startPages/allPages.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
@@ -14,83 +16,91 @@
     <div class="container is-fluid">
         <div class="columns">
             <div class="column All--Menu">
-                    <a href="../start.html" class="button is-primary">Повернутися!</a>
-                    <aside class="menu All--Menu__list">
-                      <p class="menu-label">
+                <a href="../start.html" class="button is-primary">Повернутися!</a>
+                <aside class="menu All--Menu__list">
+                    <p class="menu-label">
                         <span class="tag is-black is-large">
                             Алгоритми сортування
                         </span>
-                       </p>
-                        <ul class="menu-list">
-                          <div class="column All--list">
-                              <!-- 1 -->
-                              <li><a class="is-active All--list__buttons" id="All--list__activeButton" aria-current="page">Bubble Sort</a></li>
-                              <!-- 2 -->
-                              <li><a href="two.html" class="button is-white All--list__buttons">Insertion Sort</a></li>
-                              <!-- 3 -->
-                              <li><a href="three.html" class="button is-white All--list__buttons">Quick Sort</a></li>
-                              <!-- 4 -->
-                              <li><a href="four.html" class="button is-white All--list__buttons">Merge Sort</a></li>
-                              <!-- 5 -->
-                              <li><a href="five.html" class="button is-white All--list__buttons">Smooth Sort</a></li>
-                              <!-- 6 -->
-                              <li><a href="six.html" class="button is-white All--list__buttons">Selection Sort</a></li>
-                              <!-- 7 -->
-                              <li><a href="seven.html" class="button is-white All--list__buttons">Pyramid Sort</a></li>
-                              <!-- 8 -->
-                              <li><a href="eight.html" class="button is-white All--list__buttons">Bucket Sort</a></li>
-                              <!-- 9 -->
-                              <li><a href="nine.html" class="button is-white All--list__buttons">Shell Sort</a></li>
-                              <!-- 10 -->
-                              <li><a href="ten.html" class="button is-white All--list__buttons">Random Sort</a></li>
-                            </div>
-                          </ul>
-                    </aside>
+                    </p>
+                    <ul class="menu-list">
+                        <div class="column All--list">
+                            <!-- 1 -->
+                            <li><a class="is-active All--list__buttons" id="All--list__activeButton"
+                                   aria-current="page">Bubble Sort</a></li>
+                            <!-- 2 -->
+                            <li><a href="two.html" class="button is-white All--list__buttons">Insertion Sort</a></li>
+                            <!-- 3 -->
+                            <li><a href="three.html" class="button is-white All--list__buttons">Quick Sort</a></li>
+                            <!-- 4 -->
+                            <li><a href="four.html" class="button is-white All--list__buttons">Merge Sort</a></li>
+                            <!-- 6 -->
+                            <li><a href="six.html" class="button is-white All--list__buttons">Selection Sort</a></li>
+                            <!-- 8 -->
+                            <li><a href="eight.html" class="button is-white All--list__buttons">Bucket Sort</a></li>
+                            <!-- 9 -->
+                            <li><a href="nine.html" class="button is-white All--list__buttons">Shell Sort</a></li>
+                            <!-- 10 -->
+                            <li><a href="ten.html" class="button is-white All--list__buttons">Random Sort</a></li>
+                        </div>
+                    </ul>
+                </aside>
             </div>
             <div class="column is-8 All--Menu">
-              <div class="columns">
-                <div class="content">
-                  <div class="column">
+                <div class="columns">
                     <div class="content">
-                      <p class="All--description">Сортування бульбашкою
-                      </p>
-                      <p class="All--description">
-                        Складність алгоритму у найгіршому у середньостатистичному випадку рівна О(n²), де n — кількість елементів для сортування. Існує чимало значно ефективніших алгоритмів, наприклад, з найгіршою ефективністю рівною O(n log n). Тому даний алгоритм має низьку ефективність у випадках, коли N є досить великим, за винятком рідкісних конкретних випадків, коли заздалегідь відомо, що масив з самого початку буде добре відсортований.
-                        Реалізація на С++ та Java Script
-                      </p>
-                      <div class="columns is-parental">
                         <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">C++</p>
-                                <p>
-                                  for(j = 0; j < n - 1; j++)<br />
-                                  for(i = 0; i < n - 1; i++)<br />
-                                    if (arr[i] > arr[i + 1])<br />
-                                    tmp = arr[i];<br />
-                                    arr[i] = arr[i + 1];<br />
-                                    arr[i + 1] = tmp;<br />
-                                </p>
+                            <div class="content">
+                                <p class="All--description">
+                                    <article class="message">
+                                        <div class="message-header">
+                                <p>Сортування бульбашкою</p>
+                                <button class="delete" aria-label="delete"></button>
+                            </div>
+                            <div class="message-body">
+                                Складність алгоритму у найгіршому у середньостатистичному випадку рівна О(n²), де n —
+                                кількість елементів для сортування. Існує чимало значно ефективніших алгоритмів,
+                                наприклад, з найгіршою ефективністю рівною O(n log n). Тому даний алгоритм має низьку
+                                ефективність у випадках, коли N є досить великим, за винятком рідкісних конкретних
+                                випадків, коли заздалегідь відомо, що масив з самого початку буде добре відсортований.
+                                Реалізація на С++ та Java Script
+                            </div>
+                            </article>
+
+                            </p>
+                            <div class="column">
+                            <pre class="line-numbers">
+                                <code class="language-c">// A function to implement bubble sort
+void bubbleSort(int arr[], int n) {
+  int i, j;
+  for (i = 0; i < n - 1; i++)
+  // Last i elements are already in place
+    for (j = 0; j < n - i - 1; j++)
+    if (arr[j] > arr[j + 1])
+      swap( & arr[j], & arr[j + 1]);
+}</code></pre>
+
+                                <pre class="line-numbers">
+                            <code class="language-javascript">function bubbleSort(a) {
+  var swapped;
+  do {
+    swapped = false;
+    for (var i = 0; i < a.length - 1; i++) {
+      if (a[i] > a[i + 1]) {
+        var temp = a[i];
+        a[i] = a[i + 1];
+        a[i + 1] = temp;
+        swapped = true;
+      }
+    }
+  } while (swapped);
+}</code></pre>
                             </div>
                         </div>
-                        <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">Java Script</p>
-                                <p>for(j = 0; j < n - 1; j++)<br />
-                                  for(i = 0; i < n - 1; i++)<br />
-                                    if (arr[i] > arr[i + 1]) <br />
-                                    tmp = arr[i];<br />
-                                    arr[i] = arr[i + 1];<br />
-                                    arr[i + 1] = tmp;<br />
-                              </p>
-                            </div>
-                        </div>
-                      </div>
-                  </div>
+                    </div>
                 </div>
-              </div>
             </div>
         </div>
-    </div>
 </selection>
 </body>
 </html>

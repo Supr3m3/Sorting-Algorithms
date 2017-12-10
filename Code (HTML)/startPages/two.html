@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../../vendor/bulma.min.css">
     <link rel="stylesheet" href="../../Code%20(CSS)/styles.css">
     <link href="../../Code (CSS)/startPages/allPages.css" rel="stylesheet" type="text/css"/>
+    <script src="../../vendor/prism.js"></script>
+    <link href="../../vendor/prism.css" rel="stylesheet"/>
 </head>
 <body>
 <selection>
@@ -31,12 +33,8 @@
                               <li><a href="three.html" class="button is-white All--list__buttons">Quick Sort</a></li>
                               <!-- 4 -->
                               <li><a href="four.html" class="button is-white All--list__buttons">Merge Sort</a></li>
-                              <!-- 5 -->
-                              <li><a href="five.html" class="button is-white All--list__buttons">Smooth Sort</a></li>
                               <!-- 6 -->
                               <li><a href="six.html" class="button is-white All--list__buttons">Selection Sort</a></li>
-                              <!-- 7 -->
-                              <li><a href="seven.html" class="button is-white All--list__buttons">Pyramid Sort</a></li>
                               <!-- 8 -->
                               <li><a href="eight.html" class="button is-white All--list__buttons">Bucket Sort</a></li>
                               <!-- 9 -->
@@ -51,43 +49,54 @@
               <div class="columns">
                 <div class="content">
                   <div class="column">
-                    <div class="content">
-                      <p class="All--description">Сортування вставкою
-                      </p>
-                      <p class="All--description">
-                      Сортування вставками – досить простий алгоритм. Як в і будь-якому іншому алгоритмі сортування, зі збільшенням розміру сортованого масиву збільшується і час сортування. Основною перевагою алгоритму сортування вставками є можливість сортувати масив по мірі його отримання.То тобто маючи частина масиву, можна починати його сортувати. У паралельному програмування така особливість відіграє не останню роль.
-                      Його середній час виконання - О(n²)
-                      Сортований масив можна розділити на дві частини – відсортована частина і невідсортовані. На початку сортування перший елемент масиву вважається відсортованим, всі інші – НЕ відсортовані. Починаючи з другого елемента масиву і закінчуючи останнім, алгоритм вставляє невідсортоване елемент масиву в потрібну позицію у відсортованій частині масиву. Таким чином, за один крок сортування відсортована частина масиву збільшується на один елемент, а невідсортовані частина масиву зменшується на один елемент.
-                      </p>
-                      <div class="columns is-parental">
-                        <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">C++</p>
-                                void Sort(int* arr, int n)<br />
-                                  int counter=0;<br />
-                                  for(int i = 1; i < n ; i++)<br />
-                                    for(int j=i; j > 0; arr[j-1] > arr[j] ; j--)<br />
-                                      counter++;<br />
-                                      int tmp = arr[j - 1];<br />
-                                      arr[j - 1] = arr[j];<br />
-                                      arr[j] = tmp;<br />
-                                  cout << counter << endl<br />
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">Java Script</p>
-                                void Sort(int* arr, int n)<br />
-                                  int counter=0;<br />
-                                  for(int i = 1; i < n ; i++)<br />
-                                    for(int j=i; j > 0; arr[j-1] > arr[j] ; j--)<br />
-                                      counter++;<br />
-                                      int tmp = arr[j - 1];<br />
-                                      arr[j - 1] = arr[j];<br />
-                                      arr[j] = tmp;<br />
-                                  cout << counter << endl;<br />
-                            </div>
-                        </div>
+                      <div class="content">
+                          <article class="message">
+                              <div class="message-header">
+                                  <p>Сортування вставкою</p>
+                                  <button class="delete" aria-label="delete"></button>
+                              </div>
+                              <div class="message-body">
+                        Сортування вставками – досить простий алгоритм. Як в і будь-якому іншому алгоритмі сортування, зі збільшенням розміру сортованого масиву збільшується і час сортування. Основною перевагою алгоритму сортування вставками є можливість сортувати масив по мірі його отримання.То тобто маючи частина масиву, можна починати його сортувати. У паралельному програмування така особливість відіграє не останню роль.
+                        Його середній час виконання - О(n²)
+                        Сортований масив можна розділити на дві частини – відсортована частина і невідсортовані. На початку сортування перший елемент масиву вважається відсортованим, всі інші – НЕ відсортовані. Починаючи з другого елемента масиву і закінчуючи останнім, алгоритм вставляє невідсортоване елемент масиву в потрібну позицію у відсортованій частині масиву. Таким чином, за один крок сортування відсортована частина масиву збільшується на один елемент, а невідсортовані частина масиву зменшується на один елемент.
+                              </div>
+                            </article>
+                      <div class="column">
+                            <pre class="line-numbers">
+                                <code class="language-c">
+                                    void insertionSort(int arr[], int length) {
+                                      int j, temp;
+                                      for (int i = 0; i < length; i++) {
+                                        j = i;
+                                        while (j > 0 && arr[j] < arr[j - 1]) {
+                                          temp = arr[j];
+                                          arr[j] = arr[j - 1];
+                                          arr[j - 1] = temp;
+                                          j--;
+                                        }
+                                      }
+                                    }
+                                </code>
+                            </pre>
+
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                function insertionSort(unsortedList) {
+                                var len = unsortedList.length;
+                                for (var i = 1; i < len; i++) {
+                                    var tmp = unsortedList[i]; //Copy of the                                            current element.
+                                    /*Check through the sorted part and compare                                         with the number in tmp. If large, shift the                                     number*/
+                                    for (var j = i - 1; j >= 0 && (unsortedList[j]                                      > tmp); j--) {
+                                        //Shift the number
+                                        unsortedList[j + 1] = unsortedList[j];
+                                    }
+                                    //Insert the copied number at the correct                                           position
+                                    //in sorted part.
+                                    unsortedList[j + 1] = tmp;
+                                }
+                            }
+                            </code>
+                        </pre>
                       </div>
                   </div>
                 </div>

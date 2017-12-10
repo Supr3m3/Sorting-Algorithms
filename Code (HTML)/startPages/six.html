@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../../vendor/bulma.min.css">
     <link rel="stylesheet" href="../../Code%20(CSS)/styles.css">
     <link href="../../Code (CSS)/startPages/allPages.css" rel="stylesheet" type="text/css"/>
+    <script src="../../vendor/prism.js"></script>
+    <link href="../../vendor/prism.css" rel="stylesheet" />
 </head>
 <body>
 <selection>
@@ -31,12 +33,8 @@
                               <li><a href="three.html" class="button is-white All--list__buttons">Quick Sort</a></li>
                               <!-- 4 -->
                               <li><a href="four.html" class="button is-white All--list__buttons">Merge Sort</a></li>
-                              <!-- 5 -->
-                              <li><a href="five.html" class="button is-white All--list__buttons">Smooth Sort</a></li>
                               <!-- 6 -->
                               <li><a class="is-active All--list__buttons" id="All--list__activeButton" aria-current="page">Selection Sort</a></li>
-                              <!-- 7 -->
-                              <li><a href="seven.html" class="button is-white All--list__buttons">Pyramid Sort</a></li>
                               <!-- 8 -->
                               <li><a href="eight.html" class="button is-white All--list__buttons">Bucket Sort</a></li>
                               <!-- 9 -->
@@ -52,36 +50,61 @@
                 <div class="content">
                   <div class="column">
                     <div class="content">
-                      <p class="All--description">Сортування вибором
-                      </p>
-                      <p class="All--description">
-                        Завдання полягає в наступному: є частина масиву, яка вже відсортована, і потрібно вставити інші елементи масиву в відсортовану частину, зберігши при цьому впорядкованість. Для цього на кожному кроці алгоритму ми вибираємо один з елементів вхідних даних і вставляємо його на потрібну позицію в уже відсортованої частини масиву, до тих пір поки весь набір вхідних даних не буде відсортований. Метод вибору чергового елементу з початкового масиву довільний, проте зазвичай (і з метою отримання стійкого алгоритму сортування), елементи вставляються по порядку їх появи у вхідному масиві.
-                        Так як в процесі роботи алгоритму можуть мінятися місцями тільки сусідні елементи, кожен обмін зменшує число інверсій на одиницю. Отже, кількість обмінів дорівнює кількості інверсій в вихідному масиві незалежно від реалізації сортування. Максимальна кількість інверсій міститься в масиві, елементи якого відсортовані по незростання. Число інверсій в такому масиві.
-                        Алгоритм працює за O (n + k), де k - число обмінів елементів вхідного масиву, яка дорівнює кількості інверсій. В середньому і в гіршому випадку - за O (n<sup>2</sup>). Мінімальні оцінки зустрічаються в разі вже впорядкованої вихідної послідовності елементів, найгірші - коли вони розташовані в зворотному порядку.
-                      </p>
-                      <div class="columns is-parental">
-                        <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">C++</p>
-                                function insertionSort(a):<br />
-                                for i = 1 to (n - 1)<br/>
-                                  j = i - 1;<br/>
-                                  while (j < 0) and (a[j] > a[j + 1])<br/>
-                                    swap(a[j], a[j + 1]);<br/>
-                                    j--;<br/>
+                        <article class="message">
+                            <div class="message-header">
+                                <p>Сортування вставкою</p>
+                                <button class="delete" aria-label="delete"></button>
                             </div>
-                        </div>
+                            <div class="message-body">
+                                Завдання полягає в наступному: є частина масиву, яка вже відсортована, і потрібно вставити інші елементи масиву в відсортовану частину, зберігши при цьому впорядкованість. Для цього на кожному кроці алгоритму ми вибираємо один з елементів вхідних даних і вставляємо його на потрібну позицію в уже відсортованої частини масиву, до тих пір поки весь набір вхідних даних не буде відсортований. Метод вибору чергового елементу з початкового масиву довільний, проте зазвичай (і з метою отримання стійкого алгоритму сортування), елементи вставляються по порядку їх появи у вхідному масиві.
+                                Так як в процесі роботи алгоритму можуть мінятися місцями тільки сусідні елементи, кожен обмін зменшує число інверсій на одиницю. Отже, кількість обмінів дорівнює кількості інверсій в вихідному масиві незалежно від реалізації сортування. Максимальна кількість інверсій міститься в масиві, елементи якого відсортовані по незростання. Число інверсій в такому масиві.
+                                Алгоритм працює за O (n + k), де k - число обмінів елементів вхідного масиву, яка дорівнює кількості інверсій. В середньому і в гіршому випадку - за O (n<sup>2</sup>). Мінімальні оцінки зустрічаються в разі вже впорядкованої вихідної послідовності елементів, найгірші - коли вони розташовані в зворотному порядку.
+                            </div>
+                        </article>
+
                         <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">Java Script</p>
-                                function insertionSort(a):<br />
-                                for i = 1 to (n - 1)<br />
-                                  j = i - 1;<br />
-                                  k = binSearch(a, a[i], 0, j);<br />
-                                  for m = j downto k<br />
-                                    swap(a[m], a[m+1]);<br />
-                        </div>
-                      </div>
+                        <pre class="line-numbers">
+                            <code class="language-c">
+                                void selectionSort(int arr[], int n) {
+                                  int i, j, min_idx;
+                                  // One by one move boundary of unsorted subarray
+                                  for (i = 0; i < n - 1; i++) {
+                                    // Find the minimum element in unsorted array
+                                    min_idx = i;
+                                    for (j = i + 1; j < n; j++)
+                                      if (arr[j] < arr[min_idx])
+                                        min_idx = j;
+                                      // Swap the found minimum element with the first element
+                                    swap( & arr[min_idx], & arr[i]);
+                                  }
+                                }
+                            </code>
+                        </pre>
+
+
+                        <pre class="line-numbers">
+                            <code class="language-javascript">
+                                function selectionSort(arr) {
+                                  var minIdx, temp,
+                                    len = arr.length;
+                                  for (var i = 0; i < len; i++) {
+                                    minIdx = i;
+                                    for (var j = i + 1; j < len; j++) {
+                                      if (arr[j] < arr[minIdx]) {
+                                        minIdx = j;
+                                      }
+                                    }
+                                    temp = arr[i];
+                                    arr[i] = arr[minIdx];
+                                    arr[minIdx] = temp;
+                                  }
+                                  return arr;
+                                }
+
+                                </code>
+                            </pre>
+                       </div>
+
                   </div>
                 </div>
               </div>

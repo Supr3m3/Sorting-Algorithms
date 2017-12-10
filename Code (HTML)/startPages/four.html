@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../../vendor/bulma.min.css">
     <link rel="stylesheet" href="../../Code%20(CSS)/styles.css">
     <link href="../../Code (CSS)/startPages/allPages.css" rel="stylesheet" type="text/css"/>
+    <script src="../../vendor/prism.js"></script>
+    <link href="../../vendor/prism.css" rel="stylesheet" />
 </head>
 <body>
 <selection>
@@ -31,12 +33,8 @@
                               <li><a href="three.html" class="button is-white All--list__buttons">Quick Sort</a></li>
                               <!-- 4 -->
                               <li><a class="is-active All--list__buttons" id="All--list__activeButton" aria-current="page">Merge Sort</a></li>
-                              <!-- 5 -->
-                              <li><a href="five.html" class="button is-white All--list__buttons">Smooth Sort</a></li>
                               <!-- 6 -->
                               <li><a href="six.html" class="button is-white All--list__buttons">Selection Sort</a></li>
-                              <!-- 7 -->
-                              <li><a href="seven.html" class="button is-white All--list__buttons">Pyramid Sort</a></li>
                               <!-- 8 -->
                               <li><a href="eight.html" class="button is-white All--list__buttons">Bucket Sort</a></li>
                               <!-- 9 -->
@@ -52,40 +50,100 @@
                 <div class="content">
                   <div class="column">
                     <div class="content">
-                      <p class="All--description">Сортування злиттям
-                      </p>
-                      <p class="All--description">
-                        У запропонованому Дж. фон Нейманом методі сортування злиттям, як і в методі Хоара, реалізовано принцип «розділяй та пануй». Масив ділиться навпіл, до кож­ної половини застосовується рекурсивно та сама процедура сортування злиттям, а відсортовані частини з'єднуються в один впорядкований масив.Отже, базовою операцією методу є злиття двох упорядкованих масивів в один. Ефективний спосіб виконання цієї операції полягає в тому, що елементи масивів порівнюються і за результатами порівняння в новий масив записується елемент або з першого, або з другого масиву. Один з масивів під час злиття може закін­читися раніше. В такому випадку елементи іншого масиву, які ще не були опра­цьовані, слід додати до нового масиву.
-                        Час злиття упорядкованих масивів лінійно залежить від їх сумарної довжини. Враховуючи цей факт, неважко буде довести, що повне сортування методом злиття, як і сортування методом Хоара, потребує виконання 0(п log п) базових операцій над елементами масиву розмірності п.
-                      </p>
-                      <div class="columns is-parental">
-                        <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">C++</p>
-                                for(j = 0; j < n - 1; j++)<br />
-                                  for(i = 0; i < n - 1; i++)<br />
-                                    if (arr[i] > arr[i + 1])<br />
-                                    tmp = arr[i];<br />
-                                    arr[i] = arr[i + 1];<br />
-                                    arr[i + 1] = tmp;<br />
+                        <article class="message">
+                            <div class="message-header">
+                                <p>Сортування злиттям</p>
+                                <button class="delete" aria-label="delete"></button>
                             </div>
+                            <div class="message-body">
+                                Сортування злиттям
+                                У запропонованому Дж. фон Нейманом методі сортування злиттям, як і в методі Хоара, реалізовано принцип «розділяй та пануй». Масив ділиться навпіл, до кож­ної половини застосовується рекурсивно та сама процедура сортування злиттям, а відсортовані частини з'єднуються в один впорядкований масив.Отже, базовою операцією методу є злиття двох упорядкованих масивів в один. Ефективний спосіб виконання цієї операції полягає в тому, що елементи масивів порівнюються і за результатами порівняння в новий масив записується елемент або з першого, або з другого масиву. Один з масивів під час злиття може закін­читися раніше. В такому випадку елементи іншого масиву, які ще не були опра­цьовані, слід додати до нового масиву.
+                                Час злиття упорядкованих масивів лінійно залежить від їх сумарної довжини. Враховуючи цей факт, неважко буде довести, що повне сортування методом злиття, як і сортування методом Хоара, потребує виконання 0(п log п) базових операцій над елементами масиву розмірності п.
+                            </div>
+                                </article>
+
+                        <div class="column">
+                          <pre class="line-numbers">
+                            <code class="language-c">void Merge(int * a, int low, int high, int mid) {
+  // We have low to mid and mid+1 to high already sorted.
+  int i, j, k, temp[high - low + 1];
+  i = low;
+  k = 0;
+  j = mid + 1;
+
+  // Merge the two parts into temp[].
+  while (i <= mid && j <= high) {
+    if (a[i] < a[j]) {
+      temp[k] = a[i];
+      k++;
+      i++;
+    } else {
+      temp[k] = a[j];
+      k++;
+      j++;
+    }
+  }
+
+  // Insert all the remaining values from i to mid into temp[].
+  while (i <= mid) {
+    temp[k] = a[i];
+    k++;
+    i++;
+  }
+
+  // Insert all the remaining values from j to high into temp[].
+  while (j <= high) {
+    temp[k] = a[j];
+    k++;
+    j++;
+  }
+
+  // Assign sorted data stored in temp[] to a[].
+  for (i = low; i <= high; i++) {
+    a[i] = temp[i - low];
+  }
+}
+
+// A function to split array into two parts.
+void MergeSort(int * a, int low, int high) {
+  int mid;
+  if (low < high) {
+    mid = (low + high) / 2;
+    // Split the data into two half.
+    MergeSort(a, low, mid);
+    MergeSort(a, mid + 1, high);
+
+    // Merge them to get sorted output.
+    Merge(a, low, high, mid);
+  }
+}
+                            </code>
+                          </pre>
+
+                            <pre class="line-numbers">
+                            <code class="language-javascript">
+                                function merge(left, right){
+                                  var result = [],
+                                      lLen = left.length,
+                                      rLen = right.length,
+                                      l = 0,
+                                      r = 0;
+                                  while(l < lLen && r < rLen){
+                                     if(left[l] < right[r]){
+                                       result.push(left[l++]);
+                                     }
+                                     else{
+                                       result.push(right[r++]);
+                                    }
+                                  }
+                                  //remaining part needs to be addred to the result
+                                  return result.concat(left.slice(l)).concat(right.slice(r));
+                                }
+
+                            </code>
                           </pre>
                         </div>
-                        <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">Java Script</p>
-                                for(j = 0; j < n - 1; j++)<br />
-                                  for(i = 0; i < n - 1; i++){<br />
-                                    if (arr[i] > arr[i + 1]) {<br />
-                                    tmp = arr[i];<br />
-                                    arr[i] = arr[i + 1];<br />
-                                    arr[i + 1] = tmp;<br />
-                            </div>
-                          </pre>
-                        </div>
-                      </div>
                   </div>
-                </div>
               </div>
             </div>
         </div>

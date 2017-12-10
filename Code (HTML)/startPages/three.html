@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../../vendor/bulma.min.css">
     <link rel="stylesheet" href="../../Code%20(CSS)/styles.css">
     <link href="../../Code (CSS)/startPages/allPages.css" rel="stylesheet" type="text/css"/>
+    <script src="../../vendor/prism.js"></script>
+    <link href="../../vendor/prism.css" rel="stylesheet" />
 </head>
 <body>
 <selection>
@@ -31,12 +33,8 @@
                               <li><a class="is-active All--list__buttons" aria-current="page">Quick Sort</a></li>
                               <!-- 4 -->
                               <li><a href="four.html" class="button is-white All--list__buttons">Merge Sort</a></li>
-                              <!-- 5 -->
-                              <li><a href="five.html" class="button is-white All--list__buttons">Smooth Sort</a></li>
                               <!-- 6 -->
                               <li><a href="six.html" class="button is-white All--list__buttons">Selection Sort</a></li>
-                              <!-- 7 -->
-                              <li><a href="seven.html" class="button is-white All--list__buttons">Pyramid Sort</a></li>
                               <!-- 8 -->
                               <li><a href="eight.html" class="button is-white All--list__buttons">Bucket Sort</a></li>
                               <!-- 9 -->
@@ -52,36 +50,53 @@
                 <div class="content">
                   <div class="column">
                     <div class="content">
-                      <p class="All--description">Сортування швидке
-                      </p>
-                      <p class="All--description">
-                        Алгоритм Quick Sort є одним з найшвидших алгоритмів сортування. Його середній час виконання - O (n log n). Quick Sort реалізується за допомогою рекурсії.
-                        У цій статті представлений демонстраційний приклад алгоритму швидкого сортування на Java.
-                        Суть алгоритму полягає в наступному. Береться певний елемент масиву (бажано Рандома, щоб алгоритм виконувався приблизно однакові проміжки часу для будь-яких наборів даних). Елементи, які знаходяться зліва і більше за значенням ніж початковий, міняються місцями з елементами, які знаходяться праворуч і менше початкового. Аналогічна операція виконується для наборів даних зліва і праворуч від початкового. І так далі по рекурсії.
-                      </p>
-                      <div class="columns is-parental">
-                        <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">C++</p>
-                                for(j = 0; j < n - 1; j++)<br />
-                                  for(i = 0; i < n - 1; i++)<br />
-                                    if (arr[i] > arr[i + 1])<br />
-                                    tmp = arr[i];<br />
-                                    arr[i] = arr[i + 1];<br />
-                                    arr[i + 1] = tmp;<br />
+                        <article class="message">
+                            <div class="message-header">
+                                <p>Сортування швидке</p>
+                                <button class="delete" aria-label="delete"></button>
                             </div>
+                            <div class="message-body">
+                                Алгоритм Quick Sort є одним з найшвидших алгоритмів сортування. Його середній час виконання - O (n log n). Quick Sort реалізується за допомогою рекурсії.
+                                У цій статті представлений демонстраційний приклад алгоритму швидкого сортування на Java.
+                                Суть алгоритму полягає в наступному. Береться певний елемент масиву (бажано Рандома, щоб алгоритм виконувався приблизно однакові проміжки часу для будь-яких наборів даних). Елементи, які знаходяться зліва і більше за значенням ніж початковий, міняються місцями з елементами, які знаходяться праворуч і менше початкового. Аналогічна операція виконується для наборів даних зліва і праворуч від початкового. І так далі по рекурсії.
+                            </div>
+                        </article>
+
+                        <div class="column">
+                        <pre class="line-numbers">
+                            <code class="language-c">
+                               /* low  --> Starting index,  high  --> Ending index */
+                               void quickSort(arr[], low, high)
+                                {
+                                    if (low < high)
+                                    {
+                                        /* pi is partitioning index, arr[p] is now
+                                           at right place */
+                                        pi = partition(arr, low, high);
+
+                                        quickSort(arr, low, pi - 1);  // Before pi
+                                        quickSort(arr, pi + 1, high); // After pi
+                                    }
+                                }
+                            </code>
                           </pre>
-                        </div>
-                        <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">Java Script</p>
-                                for(j = 0; j < n - 1; j++)<br />
-                                  for(i = 0; i < n - 1; i++)<br />
-                                    if (arr[i] > arr[i + 1])<br />
-                                    tmp = arr[i];<br />
-                                    arr[i] = arr[i + 1];<br />
-                                    arr[i + 1] = tmp;<br />
-                            </div>
+
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                              function quickSort(arr, left, right){
+                               var len = arr.length,
+                               pivot,
+                               partitionIndex;
+                              if(left < right){
+                                pivot = right;
+                                partitionIndex = partition(arr, pivot, left, right);
+                               //sort left and right
+                               quickSort(arr, left, partitionIndex - 1);
+                               quickSort(arr, partitionIndex + 1, right);
+                              }
+                              return arr;
+                            }
+                                </code>
                           </pre>
                         </div>
                       </div>

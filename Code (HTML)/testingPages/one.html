@@ -8,57 +8,380 @@
     <link rel="stylesheet" href="../../vendor/bulma.min.css">
     <link rel="stylesheet" href="../../Code%20(CSS)/styles.css">
     <link href="../../Code (CSS)/testingPages/allPages.css" rel="stylesheet" type="text/css"/>
+    <script src="../../vendor/prism.js"></script>
+    <link href="../../vendor/prism.css" rel="stylesheet"/>
 </head>
 <body>
-<selection>
+<section>
     <div class="container is-fluid">
         <div class="columns">
             <div class="column All--Menu">
-                    <a href="../testing.html" class="button is-primary">Повернутися!</a>
-                    <aside class="menu All--Menu__list">
-                      <p class="menu-label">
+                <a href="../testing.html" class="button is-primary">Повернутися!</a>
+                <aside class="menu All--Menu__list">
+                    <p class="menu-label">
                         <span class="tag is-black is-large">
                             Алгоритми сортування
                         </span>
-                       </p>
-                        <ul class="menu-list">
-                          <div class="column All--list">
-                              <!-- 1 -->
-                              <li><a class="is-active All--list__buttons" id="All--list__activeButton" aria-current="page">Task#1</a></li>
-                              <!-- 2 -->
-                              <li><a href="two.html" class="button is-white All--list__buttons">Task#2</a></li>
-                              <!-- 3 -->
-                              <li><a href="three.html" class="button is-white All--list__buttons">Task#3</a></li>
-                              <!-- 4 -->
-                              <li><a href="four.html" class="button is-white All--list__buttons">Task#4</a></li>
-                              <!-- 5 -->
-                              <li><a href="five.html" class="button is-white All--list__buttons">Task#5</a></li>
-                              <!-- 6 -->
-                              <li><a href="six.html" class="button is-white All--list__buttons">Task#6</a></li>
-                              <!-- 7 -->
-                              <li><a href="seven.html" class="button is-white All--list__buttons">Task#7</a></li>
-                              <!-- 8 -->
-                              <li><a href="eight.html" class="button is-white All--list__buttons">Task#8</a></li>
-                              <!-- 9 -->
-                              <li><a href="nine.html" class="button is-white All--list__buttons">Task#9</a></li>
-                              <!-- 10 -->
-                              <li><a href="ten.html" class="button is-white All--list__buttons">Task#10</a></li>
-                            </div>
-                          </ul>
-                    </aside>
-            </div>
-            <div class="column is-8 All--Menu">
-              <div class="columns">
-                <div class="content">
-                      <p class="All--description">Відтвори алгоритм сортування бульбашкою
-                      </p>
-                      <p class="All--description">
+                    </p>
+                    <ul class="menu-list">
+                        <div class="column All--list">
+                            <!-- 1 -->
+                            <li><a class="is-active All--list__buttons" id="All--list__activeButton"
+                                   aria-current="page">Завдання</a></li>
+                        </div>
+                    </ul>
+                </aside>
 
-                      </p>
+                <div class="column">
+                    <label>(мал.1)</label>
+                    <pre class="line-numbers">
+                                <code class="language-c">
+                                    void someSort(int arr, int length) {
+                                      int j, temp;
+                                      for (int i = 0; i < length; i++) {
+                                        j = i;
+                                        while (j > 0 && arr[j] < arr[j - 1]) {
+                                          temp = arr[j]
+                                          arr[j] = arr[j - 1];
+                                          arr[j - 1] = temp;
+                                          j--;
+                                        }
+                                      }
+                                    }
+                                </code>
+                            </pre>
                 </div>
-              </div>
+
+                <div class="column" height="200px">
+                    <label>(мал.2)</label>
+                    <img src="../../images/photo1.png" alt="image">
+                </div>
+
+                <div class="column" height="200px">
+                    <label>(мал.3)</label>
+                    <img src="../../images/photo2.png" alt="image">
+                </div>
+
+                <div class="column">
+                    <label>(мал.4)</label>
+                    <pre class="line-numbers">
+                        <code class="language-javascript">
+                            function merge(left, right) {
+  var result = [],
+    lLen = left.length,
+    rLen = right.length,
+    l = 0,
+    r = 0;
+  while (l < lLen && r < rLen) {
+    if (left[l] < right[r]) {
+      result.push(left[l++]);
+    } else {
+      result.push(right[r++]);
+    }
+  }
+  //remaining part needs to be addred to the result
+  return result.concat(left.slice(l)).concat(right.slice(r));
+}
+                        </code>
+                    </pre>
+                </div>
             </div>
+
+            <div class="column is-8 All--Menu2">
+                <div class="columns">
+                    <div class="column is-12">
+                        <div class="notification is-primary">
+                            <div class="box">
+                                1. Знайдіть помилку в алгоритмі сортування і вкажіть що це алгоритм (див мал.1)<br/>
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer1.1">
+                                        Пропущено ";"
+                                    </label><br/>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer1.1">
+                                        Вказаний некоректний тип даних
+                                    </label><br/>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer1.1">
+                                        Некоректно виділено пам'ять для масиву
+                                    </label><br/>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer1.1">
+                                        Некоректне введення данних в функцію
+                                    </label><br/>
+                                </div>
+                                <br/>
+
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="answer1.1">
+                                        Shell Sort
+                                    </label><br/>
+                                    <label class="radio">
+                                        <input type="radio" name="answer1.1">
+                                        Quick Sort
+                                    </label><br/>
+                                    <label class="radio">
+                                        <input type="radio" name="answer1.1">
+                                        Insertion Sort
+                                    </label><br/>
+                                    <label class="radio">
+                                        <input type="radio" name="answer1.1">
+                                        Bucket Sort
+                                    </label><br/>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                2. Який із даних чотирьох алгоритмів сортування відображає його швидкість виконання
+                                графіком? (див мал.2)<br/>
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="answer2.1">
+                                        Selection Sort
+                                    </label><br/>
+                                    <label class="radio">
+                                        <input type="radio" name="answer2.1">
+                                        Merge Sort
+                                    </label><br/>
+                                    <label class="radio">
+                                        <input type="radio" name="answer2.1">
+                                        Shell Sort
+                                    </label><br/>
+                                    <label class="radio">
+                                        <input type="radio" name="answer2.1">
+                                        Random Sort
+                                    </label><br/>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                3. Віднайдіть пару для кожного алгоритма та швидкістю йоговиконання.<br/>
+                                <div class="container">
+                                    1. Quick Sort <br/>
+                                    2. Random Sort <br/>
+                                    3. Insertion Sort <br/>
+                                    4. Shell Sort <br/>
+                                </div>
+                                <br/>
+
+                                <div class="control">
+                                    <label>
+                                        <input type="text" name="answer3.1">
+                                        O(n<sup>2</sup>)
+                                    </label> <br/>
+                                    <label>
+                                        <input type="text" name="answer3.1">
+                                        O(n<sup>7/6</sup>)
+                                    </label> <br/>
+                                    <label>
+                                        <input type="text" name="answer3.1">
+                                        O(n*n!)
+                                    </label> <br/>
+                                    <label class="Test--text__answers">
+                                        <input type="text" name="answer3.1">
+                                        O(n*log(n))
+                                    </label> <br/>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                4. Який алгоритм сортування є найбільш ефективним у виконанні?<br/>
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="answer4.1">
+                                        Shell Sort
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer4.1">
+                                        Heap Sort
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer4.1">
+                                        Quick Sort
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer4.1">
+                                        Bubble Sort
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                5. Чи є правильним твердження, що алгоритм сортування бульбашкою є значно швидшим за
+                                алгоритм сортування Шелла?<br/>
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="answer5.1">
+                                        Так
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer5.1">
+                                        Ні
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                6. Які твердження є правильними і відносяться до сортування злиттям?<br/>
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer6.1">
+                                        Він значно швидший за інші алгоритми сортування
+                                    </label><br/>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer6.1">
+                                        Середня швидкість виконання сортування - O(n!)
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer6.1">
+                                        В його основі лежить термін "divide and conquer"
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer6.1">
+                                        Ефективність даного алгоритму можна порівняти з ефективністю "Швидкого
+                                        сортування"
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                7. За яку мінімальну кількість кроків можливо відсортувати даний масив чисел? (див
+                                мал.3)<br/>
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="answer7.1">
+                                        2
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer7.1">
+                                        3
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer7.1">
+                                        4
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer7.1">
+                                        5
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                8. Знайдіть помилку в коді, чому цей алгоритм є некоректним? Вкажіть рядок в якому
+                                допущено помилку (див мал.4) <br/>
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer8.1">
+                                        Пропущено ";"
+                                    </label><br/>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer8.1">
+                                        Вказаний некоректний тип даних
+                                    </label><br/>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer8.1">
+                                        Некоректно виділено пам'ять для масиву
+                                    </label><br/>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer8.1">
+                                        Некоректне введення данних в функцію
+                                    </label><br/>
+                                </div>
+                                <br/>
+
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer8.1">
+                                        12
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer8.1">
+                                        15
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer8.1">
+                                        17
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="answer8.1">
+                                        23
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                9. Який алгоритм сортування є найгіршим для використання? Вкажіть його середній час
+                                роботи.<br/>
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="answer9.1">
+                                        Random
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer9.1">
+                                        Heap
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer9.1">
+                                        Bubble
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer9.1">
+                                        Merge
+                                    </label>
+                                </div>
+
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="answer9.2">
+                                        O(n)
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer9.2">
+                                        O(n*log(n))
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer9.2">
+                                        O(n*n!)
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer9.2">
+                                        O(n!)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="box">
+                                10. Який алгоритм сортування слід використати, щоб відсортувати даний масив якомога
+                                повільніше?
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="answer10.1">
+                                        Quick Sort
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer9.2">
+                                        Shell Sort
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer9.2">
+                                        Random Sort
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="answer9.2">
+                                        Heap Sort
+                                    </label>
+                                </div>
+                            </div>
+                            <a class="button">Завершити</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</selection>
+</section>
 </body>
 </html>

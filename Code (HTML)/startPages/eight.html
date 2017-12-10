@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../../vendor/bulma.min.css">
     <link rel="stylesheet" href="../../Code%20(CSS)/styles.css">
     <link href="../../Code (CSS)/startPages/allPages.css" rel="stylesheet" type="text/css"/>
+    <script src="../../vendor/prism.js"></script>
+    <link href="../../vendor/prism.css" rel="stylesheet" />
 </head>
 <body>
 <selection>
@@ -31,12 +33,8 @@
                               <li><a href="three.html" class="button is-white All--list__buttons">Quick Sort</a></li>
                               <!-- 4 -->
                               <li><a href="four.html" class="button is-white All--list__buttons">Merge Sort</a></li>
-                              <!-- 5 -->
-                              <li><a href="five.html" class="button is-white All--list__buttons">Smooth Sort</a></li>
                               <!-- 6 -->
                               <li><a href="six.html" class="button is-white All--list__buttons">Selection Sort</a></li>
-                              <!-- 7 -->
-                              <li><a href="seven.html" class="button is-white All--list__buttons">Pyramid Sort</a></li>
                               <!-- 8 -->
                               <li><a class="is-active All--list__buttons" id="All--list__activeButton" aria-current="page">Bucket Sort</a></li>
                               <!-- 9 -->
@@ -52,39 +50,98 @@
                 <div class="content">
                   <div class="column">
                     <div class="content">
-                      <p class="All--description">Сортування відром
-                      </p>
-                      <p class="All--description">
-                        Мета-алгоритм. що є основою цілих сімейств угруповань, зокрема, сортирувань підрахунком і порозрядних сортувань.
-                        Основна ідея - розподіляємо елементи по відрах (блокам, кишенях, кошиках), тобто групуємо їх за певною ознакою. Елементи в кожному відрі групуємо за уточнюючими ознаками. Продовжуємо процес розподілу, поки в кожному відрі не опиняться однакові елементи.
-                        Якщо не розподіляти за степенями десятки, а, наприклад, вибирати елемент в масиві і потім в одне відро кидати то що менше обраного елемента, а в інше - то що більше, і потім рекурсивно застосувати до кожного відру - то це не що інше як швидке сортування.
-                        Складність алгоритму у найгіршому у середньостатистичному випадку рівна О(n²), де n — кількість елементів для сортування. Реалізація сортування:
-                      </p>
-                      <div class="columns is-parental">
-                        <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">C++</p>
-                                for(j = 0; j < n - 1; j++)<br />
-                                  for(i = 0; i < n - 1; i++)<br />
-                                    if (arr[i] > arr[i + 1])<br />
-                                    tmp = arr[i];<br />
-                                    arr[i] = arr[i + 1];<br />
-                                    arr[i + 1] = tmp;<br />
+                        <article class="message">
+                            <div class="message-header">
+                                <p>Сортування Відром</p>
+                                <button class="delete" aria-label="delete"></button>
                             </div>
-                          </pre>
-                        </div>
-                        <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">Java Script</p>
-                                for(j = 0; j < n - 1; j++)<br />
-                                  for(i = 0; i < n - 1; i++)<br />
-                                    if (arr[i] > arr[i + 1])<br />
-                                    tmp = arr[i];<br />
-                                    arr[i] = arr[i + 1];<br />
-                                    arr[i + 1] = tmp;<br />
+                            <div class="message-body">
+                                Мета-алгоритм. що є основою цілих сімейств угруповань, зокрема, сортирувань підрахунком і порозрядних сортувань.
+                                Основна ідея - розподіляємо елементи по відрах (блокам, кишенях, кошиках), тобто групуємо їх за певною ознакою. Елементи в кожному відрі групуємо за уточнюючими ознаками. Продовжуємо процес розподілу, поки в кожному відрі не опиняться однакові елементи.
+                                Якщо не розподіляти за степенями десятки, а, наприклад, вибирати елемент в масиві і потім в одне відро кидати то що менше обраного елемента, а в інше - то що більше, і потім рекурсивно застосувати до кожного відру - то це не що інше як швидке сортування.
+                                Складність алгоритму у найгіршому у середньостатистичному випадку рівна О(n²), де n — кількість елементів для сортування. Реалізація сортування:
                             </div>
+                        </article>
+
+                        <div class="column">
+                            <pre class="line-numbers">
+                                <code class="language-c">
+                                    // Function to sort arr[] of size n using bucket sort
+void bucketSort(float arr[], int n) {
+  // 1) Create n empty buckets
+  vector < float > b[n];
+  // 2) Put array elements in different buckets
+  for (int i = 0; i < n; i++) {
+    int bi = n * arr[i]; // Index in bucket
+    b[bi].push_back(arr[i]);
+  }
+  // 3) Sort individual buckets
+  for (int i = 0; i < n; i++)
+    sort(b[i].begin(), b[i].end());
+  // 4) Concatenate all buckets into arr[]
+  int index = 0;
+  for (int i = 0; i < n; i++)
+    for (int j = 0; j < b[i].size(); j++)
+      arr[index++] = b[i][j];
+}
+                                </code>
+                            </pre>
+
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    // InsertionSort to be used within bucket sort
+function insertionSort(array) {
+  var length = array.length;
+  for (var i = 1; i < length; i++) {
+    var temp = array[i];
+    for (var j = i - 1; j >= 0 && array[j] > temp; j--) {
+      array[j + 1] = array[j];
+    }
+    array[j + 1] = temp;
+  }
+  return array;
+}
+// Implement bucket sort
+function bucketSort(array, bucketSize) {
+  if (array.length === 0) {
+    return array;
+  }
+  // Declaring vars
+  var i,
+    minValue = array[0],
+    maxValue = array[0],
+    bucketSize = bucketSize || 5;
+  // Setting min and max values
+  array.forEach(function (currentVal) {
+    if (currentVal < minValue) {
+      minValue = currentVal;
+    } else if (currentVal > maxValue) {
+      maxValue = currentVal;
+    }
+  })
+  // Initializing buckets
+  var bucketCount = Math.floor((maxValue - minValue) / bucketSize) + 1;
+  var allBuckets = new Array(bucketCount);
+  for (i = 0; i < allBuckets.length; i++) {
+    allBuckets[i] = [];
+  }
+  // Pushing values to buckets
+  array.forEach(function (currentVal) {
+    allBuckets[Math.floor((currentVal - minValue) / bucketSize)].push(currentVal);
+  });
+  // Sorting buckets
+  array.length = 0;
+  allBuckets.forEach(function (bucket) {
+    insertionSort(bucket);
+    bucket.forEach(function (element) {
+      array.push(element)
+    });
+  });
+  return array;
+}
+                                </code>
+                            </pre>
                         </div>
-                      </div>
                   </div>
                 </div>
               </div>

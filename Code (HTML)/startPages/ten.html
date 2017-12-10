@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../../vendor/bulma.min.css">
     <link rel="stylesheet" href="../../Code%20(CSS)/styles.css">
     <link href="../../Code (CSS)/startPages/allPages.css" rel="stylesheet" type="text/css"/>
+    <script src="../../vendor/prism.js"></script>
+    <link href="../../vendor/prism.css" rel="stylesheet" />
 </head>
 <body>
 <selection>
@@ -31,12 +33,8 @@
                               <li><a href="three.html" class="button is-white All--list__buttons">Quick Sort</a></li>
                               <!-- 4 -->
                               <li><a href="four.html" class="button is-white All--list__buttons">Merge Sort</a></li>
-                              <!-- 5 -->
-                              <li><a href="five.html" class="button is-white All--list__buttons">Smooth Sort</a></li>
                               <!-- 6 -->
                               <li><a href="six.html" class="button is-white All--list__buttons">Selection Sort</a></li>
-                              <!-- 7 -->
-                              <li><a href="seven.html" class="button is-white All--list__buttons">Pyramid Sort</a></li>
                               <!-- 8 -->
                               <li><a href="eight.html" class="button is-white All--list__buttons">Bucket Sort</a></li>
                               <!-- 9 -->
@@ -52,36 +50,57 @@
                 <div class="content">
                   <div class="column">
                     <div class="content">
-                      <p class="All--description">Сортування рандомне (бого)
-                      </p>
-                      <p class="All--description">
-                        Претендент на звання найповільнішого сортування.
-                        Масив перемішується до тих пір поки не відсортуєтся.
-                        У найгіршому випадку, час сортування: ∞; В середньому, час сортування: O(n x n!).
-                        Як відомо, для масиву містить n елементів існує n! перестановок. Перемішаємо масив. В результаті цієї дії, Всесвіт розщепиться на n! паралельних світів, в кожному з яких своє розташування елементів в шуканому масиві.
-                        Переміщаємося з Всесвіту у Всесвіт і в кожної перевіряємо масив. Якщо масив не впорядкований, то знищуємо Всесвіт. У підсумку залишаться тільки ті Всесвіти, в яких цей масив відсортований.
-                      </p>
-                      <div class="columns is-parental">
-                        <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">C++</p>
-                                for(j = 0; j < n - 1; j++)<br />
-                                  for(i = 0; i < n - 1; i++)<br />
-                                    if (arr[i] > arr[i + 1])<br />
-                                    tmp = arr[i];<br />
-                                    arr[i] = arr[i + 1];<br />
-                                    arr[i + 1] = tmp;<br />
+                        <article class="message">
+                            <div class="message-header">
+                                <p>Сортування Рандомне</p>
+                                <button class="delete" aria-label="delete"></button>
                             </div>
-                        </div>
-                        <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">Java Script</p>
-                                for(j = 0; j < n - 1; j++)<br />
-                                  for(i = 0; i < n - 1; i++)<br />
-                                    if (arr[i] > arr[i + 1])<br />
-                                    tmp = arr[i];<br />
-                                    arr[i] = arr[i + 1];<br />
-                                    arr[i + 1] = tmp;<br />
+                            <div class="message-body">
+                                Претендент на звання найповільнішого сортування.
+                                Масив перемішується до тих пір поки не відсортуєтся.
+                                У найгіршому випадку, час сортування: ∞; В середньому, час сортування: O(n x n!).
+                                Як відомо, для масиву містить n елементів існує n! перестановок. Перемішаємо масив. В результаті цієї дії, Всесвіт розщепиться на n! паралельних світів, в кожному з яких своє розташування елементів в шуканому масиві.
+                                Переміщаємося з Всесвіту у Всесвіт і в кожної перевіряємо масив. Якщо масив не впорядкований, то знищуємо Всесвіт. У підсумку залишаться тільки ті Всесвіти, в яких цей масив відсортований.
+                            </div>
+                        </article>
+
+                      <div class="column">
+                        <pre class="line-numbers">
+                            <code class="language-c">
+                            void random_shuffle(RandomIt first, RandomIt last) {
+  typename std::iterator_traits < RandomIt > ::difference_type i, n;
+  n = last - first;
+  for (i = n - 1; i > 0; --i) {
+    using std::swap;
+    swap(first[i], first[std::rand() % (i + 1)]);
+    // rand() % (i+1) isn't actually correct, because the generated number
+    // is not uniformly distributed for most values of i. A correct implementation
+    // will need to essentially reimplement C++11 std::uniform_int_distribution,
+    // which is beyond the scope of this example.
+  }
+}
+                                </code>
+                            </pre>
+
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                function shuffle(array) {
+  var currentIndex = array.length,
+    temporaryValue, randomIndex;
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
+                                </code>
+                            </pre>
                             </div>
                         </div>
                       </div>

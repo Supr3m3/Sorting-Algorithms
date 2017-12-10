@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../../vendor/bulma.min.css">
     <link rel="stylesheet" href="../../Code%20(CSS)/styles.css">
     <link href="../../Code (CSS)/startPages/allPages.css" rel="stylesheet" type="text/css"/>
+    <script src="../../vendor/prism.js"></script>
+    <link href="../../vendor/prism.css" rel="stylesheet" />
 </head>
 <body>
 <selection>
@@ -31,12 +33,8 @@
                               <li><a href="three.html" class="button is-white All--list__buttons">Quick Sort</a></li>
                               <!-- 4 -->
                               <li><a href="four.html" class="button is-white All--list__buttons">Merge Sort</a></li>
-                              <!-- 5 -->
-                              <li><a href="five.html" class="button is-white All--list__buttons">Smooth Sort</a></li>
                               <!-- 6 -->
                               <li><a href="six.html" class="button is-white All--list__buttons">Selection Sort</a></li>
-                              <!-- 7 -->
-                              <li><a href="seven.html" class="button is-white All--list__buttons">Pyramid Sort</a></li>
                               <!-- 8 -->
                               <li><a href="eight.html" class="button is-white All--list__buttons">Bucket Sort</a></li>
                               <!-- 9 -->
@@ -52,36 +50,73 @@
                 <div class="content">
                   <div class="column">
                     <div class="content">
-                      <p class="All--description">Сортування Шелла
-                      </p>
-                      <p class="All--description">
-                        Сортування Шелла - це надбудова над сортуванням вставками; замість одного проходу ми робимо кілька, причому на i-му проході ми сортуємо подмассіви з елементів, що стоять один від одного на відстані di.
+                     <article class="message">
+                            <div class="message-header">
+                                <p>Сортування Шелла</p>
+                                <button class="delete" aria-label="delete"></button>
+                            </div>
+                            <div class="message-body">
+                                Сортування Шелла - це надбудова над сортуванням вставками; замість одного проходу ми робимо кілька, причому на i-му проході ми сортуємо подмассіви з елементів, що стоять один від одного на відстані di.
                         При цьому на останньому проході di має дорівнювати 1 (тобто останній крок - це звичайна сортування вставками), це гарантує коректність алгоритму.
                         Складність алгоритму залежить від вибору кількості проходів і значень di, і може сильно варіюватися. У гіршому випадку його складність становить O (n<sup>4/3</sup>), а в середньому O (n<sup>7/6</sup>).
-                      </p>
-                      <div class="columns is-parental">
-                        <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">C++</p>
-                                for(j = 0; j < n - 1; j++)<br />
-                                  for(i = 0; i < n - 1; i++)<br />
-                                    if (arr[i] > arr[i + 1])<br />
-                                    tmp = arr[i];<br />
-                                    arr[i] = arr[i + 1];<br />
-                                    arr[i + 1] = tmp;<br />
                             </div>
-                        </div>
+                     </article>
+
                         <div class="column">
-                            <div class="box All--code">
-                               <p class="subtitle">Java Script</p>
-                                for(j = 0; j < n - 1; j++)<br />
-                                  for(i = 0; i < n - 1; i++)<br />
-                                    if (arr[i] > arr[i + 1])<br />
-                                    tmp = arr[i];<br />
-                                    arr[i] = arr[i + 1];<br />
-                                    arr[i + 1] = tmp;<br />
-                            </div>
-                        </div>
+                            <pre class="line-numbers">
+                            <code class="language-c">
+                                /* function to sort arr using shellSort */
+int shellSort(int arr[], int n) {
+  // Start with a big gap, then reduce the gap
+  for (int gap = n / 2; gap > 0; gap /= 2) {
+    // Do a gapped insertion sort for this gap size.
+    // The first gap elements a[0..gap-1] are already in gapped order
+    // keep adding one more element until the entire array is
+    // gap sorted
+    for (int i = gap; i < n; i += 1) {
+      // add a[i] to the elements that have been gap sorted
+      // save a[i] in temp and make a hole at position i
+      int temp = arr[i];
+
+      // shift earlier gap-sorted elements up until the correct
+      // location for a[i] is found
+      int j;
+      for (j = i; j >= gap && arr[j - gap] > temp; j -= gap)
+        arr[j] = arr[j - gap];
+
+      //  put temp (the original a[i]) in its correct location
+      arr[j] = temp;
+    }
+  }
+  return 0;
+}
+                            </code>
+                        </pre>
+
+                        <pre class="line-numbers">
+                            <code class="language-javascript">
+                                function shellSort(arr) {
+                                  var increment = arr.length / 2;
+                                  while (increment > 0) {
+                                    for (i = increment; i < arr.length; i++) {
+                                      var j = i;
+                                      var temp = arr[i];
+                                      while (j >= increment && arr[j - increment] > temp) {
+                                        arr[j] = arr[j - increment];
+                                        j = j - increment;
+                                      }
+                                      arr[j] = temp;
+                                    }
+                                    if (increment == 2) {
+                                      increment = 1;
+                                    } else {
+                                      increment = parseInt(increment * 5 / 11);
+                                    }
+                                  }
+                                  return arr;
+                                }
+                            </code>
+                        </pre>
                       </div>
                   </div>
                 </div>
