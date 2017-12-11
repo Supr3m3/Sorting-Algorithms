@@ -103,10 +103,81 @@
                                   }
                                 });
 
-                                if (document.getElementsByName('answer3.1')[0].value !== "1") {
+                                document.getElementsByName('answer2.1').forEach(input => {
+                                  if (input.value === "0" && input.checked === false) {
+                                    throw Error();
+                                  }
+                                });
+
+                                if (document.getElementsByName('answer3.1')[0].value !== "3") {
                                   throw Error();
                                 }
 
+                                if (document.getElementsByName('answer3.2')[0].value !== "4") {
+                                  throw Error();
+                                }
+
+                                if (document.getElementsByName('answer3.3')[0].value !== "2") {
+                                  throw Error();
+                                }
+
+                                if (document.getElementsByName('answer3.4')[0].value !== "1") {
+                                  throw Error();
+                                }
+
+                                document.getElementsByName('answer4.1').forEach(input => {
+                                  if (input.value === "2" && input.checked === false) {
+                                    throw Error();
+                                  }
+                                });
+
+                                document.getElementsByName('answer5.1').forEach(input => {
+                                  if (input.value === "1" && input.checked === false) {
+                                    throw Error();
+                                  }
+                                });
+
+                                document.getElementsByName('answer6.1').forEach(input => {
+                                  if (input.value === "2" && input.checked === false) {
+                                    throw Error();
+                                  }
+
+                                  if (input.value === "3" && input.checked === false) {
+                                    throw Error();
+                                  }
+                                });
+
+                                document.getElementsByName('answer7.1').forEach(input => {
+                                  if (input.value === "1" && input.checked === false) {
+                                    throw Error();
+                                  }
+                                });
+
+                                document.getElementsByName('answer8.1').forEach(input => {
+                                  if (input.value === "3" && input.checked === false) {
+                                    throw Error();
+                                  }
+
+                                  if (input.value === "5" && input.checked === false) {
+                                    throw Error();
+                                  }
+                                });
+
+                                document.getElementsByName('answer9.1').forEach(input => {
+                                  if (input.value === "0" && input.checked === false) {
+                                    throw Error();
+                                  }
+
+                                  if (input.value === "6" && input.checked === false) {
+                                    throw Error();
+                                  }
+                                });
+
+                                document.getElementsByName('answer10.1').forEach(input => {
+                                  if (input.value === "2" && input.checked === false) {
+                                    throw Error();
+                                  }
+                                });
                                 alert('Всі відповіді вірні!');
                               } catch (e) {
                                 alert('Одна з відповідей не вірна!');
