@@ -10,5 +10,26 @@ body {
 
 label.label {
     color: #fff;
-    font-style:
+}
+
+.Display--sort {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.Display--sort-element {
+    margin-right: 10px;
+}
+
+.Display--sort-block {
+    transition: height 300ms linear;
+    background: #fff;
+    width: 15px;
+}
+
+.Display-sort-block-changed {
+    transition: all 300ms linear;
+    background: yellow;
 }

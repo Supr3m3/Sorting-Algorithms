@@ -4,65 +4,88 @@
     <meta http-equiv="pragma" content="no-cache ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Analysis</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../vendor/bulma.min.css">
     <link rel="stylesheet" href="../Code%20(CSS)/styles.css">
     <link href="../Code (CSS)/index.css" rel="stylesheet" type="text/css"/>
 </head>
 <body class="Body">
-	<html>
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <meta http-equiv="pragma" content="no-cache ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sorting Algorithms</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../vendor/bulma.min.css">
     <link rel="stylesheet" href="../Code%20(CSS)/styles.css">
     <link href="../Code (CSS)/testing.css" rel="stylesheet" type="text/css"/>
+    <script src="../vendor/jquery-3.2.1.min.js"></script>
+    <script src="../vendor/polyfill.js"></script>
+    <script src="../Code%20(JS)/main.compiled.js"></script>
 </head>
 <body>
 <section class="section">
     <div class="container is-fluid">
-            <div class="columns">
-                <div class="column is-2 Test--Menu">
-                    <aside class="menu">
-                      <p class="menu-label">
+        <div class="columns">
+            <div class="column is-2 Test--Menu">
+                <aside class="menu">
+                    <p class="menu-label">
                         <span class="tag is-black">
                         Початок подорожі
                         </span>
-                      </p>
-                      <ul class="menu-list">
-                        <li><a href="start.html" class="button is-white">Почати!</a></li>
-                      </ul>
-                      <p class="menu-label">
+                    </p>
+                    <ul class="menu-list">
+                        <li>
+                            <a href="start.html" class="button is-white">
+                                Почати!
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="menu-label">
                         <span class="tag is-black">
                         Графіка
                         </span>
-                      </p>
-                      <ul class="menu-list">
-                        <li><a class="is-active Test--list__buttons" id="Test--list__activeButton" aria-current="page">Аналіз!</a></li>
-                      <p class="menu-label">
+                    </p>
+                    <ul class="menu-list">
+                        <li>
+                            <a class="is-active Test--list__buttons"
+                               id="Test--list__activeButton"
+                               aria-current="page">Аналіз!
+                            </a>
+                        </li>
+                        <p class="menu-label">
                         <span class="tag is-black">
                         Екзаменаційні завдання
                         </span>
-                      </p>
-                      <ul class="menu-list">
-                        <li><a href="testing.html" class="button is-white">Тестування!</a></li>
-                      </ul>
-                      <p class="menu-label">
+                        </p>
+                        <ul class="menu-list">
+                            <li>
+                                <a href="testing.html" class="button is-white">
+                                    Тестування!
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="menu-label">
                         <span class="tag is-black">
                         Інформація
                         </span>
-                      </p>
-                      <ul class="menu-list">
-                        <li><a href="info.html" class="button is-white">Інформація!</a></li>
-                      </ul>
-                    </aside><br/>
-                    <div class="column">
-                        <a href="analysisPages/one.html" class="button is-primary">Розпочати!</a>
-                    </div>
+                        </p>
+                        <ul class="menu-list">
+                            <li>
+                                <a href="info.html" class="button is-white">
+                                    Інформація!
+                                </a>
+                            </li>
+                        </ul>
+                </aside>
+                <br/>
+                <div class="column">
+                    <a href="index.html" class="button is-primary">Повернутись</a>
                 </div>
+            </div>
                 <div class="column is-8 Test--description__div">
                     <div class="content is-medium">
                         <article class="message">
@@ -89,13 +112,61 @@
                                 <p>
                                     Що ж, приступимо до роботи!
                                 </p>
-                            </div>
-                        </article>
-                    </div>
+                        </div>
+                    </article>
                 </div>
+                    <div class="columns">
+                        <div class="column is-12 is-centered"
+                             style="display: flex;align-items: flex-end;justify-content: space-around;"
+                        >
+                            <div class="field" style="margin-bottom: 0">
+                                <label class="label">Вкажіть масив(через кому)</label>
+                                <div class="control">
+                                    <input name="array" class="input" type="text" placeholder="5,3,1,2" style="width: 250px" value="5,12,4,3,1,18,4,10,9,4">
+                                </div>
+                            </div>
+                            <div class="field" style="margin-bottom: 0">
+                                <label class="label">Оберіть алгоритм</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select id="sort-type">
+                                            <option selected value="bubbleSort">
+                                                Bubble Sort
+                                            </option>
+                                            <option value="selectionSort">Selection
+                                                Sort
+                                            </option>
+                                            <option value="insertionSort">Insertion
+                                                Sort
+                                            </option>
+                                            <option value="quickSort">Quicksort
+                                            </option>
+                                            <option value="shellSort">Shellsort
+                                            </option>
+                                            <option value="mergeSort">Merge Sort
+                                            </option>
+                                            <option value="randomSort">Random Sort
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="button is-danger" id="stop-sort">Стоп
+                            </button>
+                            <button class="button is-primary" id="start-sort">
+                                Старт
+                            </button>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-centered is-12">
+                            <div id="display-sort" class="Display--sort">
+                            </div>
+                        </div>
+                    </div>
             </div>
-            <a href="index.html" class="button is-white">Повернутись</a>
         </div>
+    </div>
 
     </div>
 </section>
