@@ -90,24 +90,49 @@
             <div class="column is-6 All--Menu2">
                 <div class="columns">
                     <div class="column is-12">
+                        <script>
+                            function checkTest(form) {
+                              try {
+                                document.getElementsByName('answer1.1').forEach(input => {
+                                  if (input.value === "0" && input.checked === false) {
+                                    throw Error();
+                                  }
+
+                                  if (input.value === "6" && input.checked === false) {
+                                    throw Error();
+                                  }
+                                });
+
+                                if (document.getElementsByName('answer3.1')[0].value !== "1") {
+                                  throw Error();
+                                }
+
+                                alert('Всі відповіді вірні!');
+                              } catch (e) {
+                                alert('Одна з відповідей не вірна!');
+                              }
+                              return false;
+                            }
+                        </script>
+                        <form onsubmit="checkTest(this); return false;">
                         <div class="notification is-primary">
                             <div class="box">
                                 1. Знайдіть помилку в алгоритмі сортування і вкажіть що це алгоритм (див мал.1)<br/>
                                 <div class="control">
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer1.1">
+                                        <input type="checkbox" name="answer1.1" value="0">
                                         Пропущено ";"
                                     </label><br/>
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer1.1">
+                                        <input type="checkbox" name="answer1.1" value="1">
                                         Вказаний некоректний тип даних
                                     </label><br/>
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer1.1">
+                                        <input type="checkbox" name="answer1.1" value="2">
                                         Некоректно виділено пам'ять для масиву
                                     </label><br/>
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer1.1">
+                                        <input type="checkbox" name="answer1.1" value="3">
                                         Некоректне введення данних в функцію
                                     </label><br/>
                                 </div>
@@ -115,19 +140,19 @@
 
                                 <div class="control">
                                     <label class="radio">
-                                        <input type="radio" name="answer1.1">
+                                        <input type="radio" name="answer1.1" value="4">
                                         Shell Sort
                                     </label><br/>
                                     <label class="radio">
-                                        <input type="radio" name="answer1.1">
+                                        <input type="radio" name="answer1.1" value="5">
                                         Quick Sort
                                     </label><br/>
                                     <label class="radio">
-                                        <input type="radio" name="answer1.1">
+                                        <input type="radio" name="answer1.1" value="6">
                                         Insertion Sort
                                     </label><br/>
                                     <label class="radio">
-                                        <input type="radio" name="answer1.1">
+                                        <input type="radio" name="answer1.1" value="7">
                                         Bucket Sort
                                     </label><br/>
                                 </div>
@@ -138,19 +163,19 @@
                                 графіком? (див мал.2)<br/>
                                 <div class="control">
                                     <label class="radio">
-                                        <input type="radio" name="answer2.1">
+                                        <input type="radio" name="answer2.1" value="0">
                                         Selection Sort
                                     </label><br/>
                                     <label class="radio">
-                                        <input type="radio" name="answer2.1">
+                                        <input type="radio" name="answer2.1" value="1">
                                         Merge Sort
                                     </label><br/>
                                     <label class="radio">
-                                        <input type="radio" name="answer2.1">
+                                        <input type="radio" name="answer2.1" value="2">
                                         Shell Sort
                                     </label><br/>
                                     <label class="radio">
-                                        <input type="radio" name="answer2.1">
+                                        <input type="radio" name="answer2.1" value="3">
                                         Random Sort
                                     </label><br/>
                                 </div>
@@ -172,15 +197,15 @@
                                         O(n<sup>2</sup>)
                                     </label> <br/>
                                     <label>
-                                        <input type="text" name="answer3.1">
+                                        <input type="text" name="answer3.2">
                                         O(n<sup>7/6</sup>)
                                     </label> <br/>
                                     <label>
-                                        <input type="text" name="answer3.1">
+                                        <input type="text" name="answer3.3">
                                         O(n*n!)
                                     </label> <br/>
                                     <label class="Test--text__answers">
-                                        <input type="text" name="answer3.1">
+                                        <input type="text" name="answer3.4">
                                         O(n*log(n))
                                     </label> <br/>
                                 </div>
@@ -190,19 +215,19 @@
                                 4. Який алгоритм сортування є найбільш ефективним у виконанні?<br/>
                                 <div class="control">
                                     <label class="radio">
-                                        <input type="radio" name="answer4.1">
+                                        <input type="radio" name="answer4.1" value="0">
                                         Shell Sort
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer4.1">
+                                        <input type="radio" name="answer4.1" value="1">
                                         Heap Sort
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer4.1">
+                                        <input type="radio" name="answer4.1" value="2">
                                         Quick Sort
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer4.1">
+                                        <input type="radio" name="answer4.1" value="3">
                                         Bubble Sort
                                     </label>
                                 </div>
@@ -213,11 +238,11 @@
                                 алгоритм сортування Шелла?<br/>
                                 <div class="control">
                                     <label class="radio">
-                                        <input type="radio" name="answer5.1">
+                                        <input type="radio" name="answer5.1" value="0">
                                         Так
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer5.1">
+                                        <input type="radio" name="answer5.1" value="1">
                                         Ні
                                     </label>
                                 </div>
@@ -227,19 +252,19 @@
                                 6. Які твердження є правильними і відносяться до сортування злиттям?<br/>
                                 <div class="control">
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer6.1">
+                                        <input type="checkbox" name="answer6.1" value="0">
                                         Він значно швидший за інші алгоритми сортування
                                     </label><br/>
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer6.1">
+                                        <input type="checkbox" name="answer6.1" value="1">
                                         Середня швидкість виконання сортування - O(n!)
                                     </label>
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer6.1">
+                                        <input type="checkbox" name="answer6.1" value="2">
                                         В його основі лежить термін "divide and conquer"
                                     </label>
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer6.1">
+                                        <input type="checkbox" name="answer6.1" value="3">
                                         Ефективність даного алгоритму можна порівняти з ефективністю "Швидкого
                                         сортування"
                                     </label>
@@ -251,19 +276,19 @@
                                 мал.3)<br/>
                                 <div class="control">
                                     <label class="radio">
-                                        <input type="radio" name="answer7.1">
+                                        <input type="radio" name="answer7.1" value="0">
                                         3
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer7.1">
+                                        <input type="radio" name="answer7.1" value="1">
                                         4
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer7.1">
+                                        <input type="radio" name="answer7.1" value="2">
                                         5
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer7.1">
+                                        <input type="radio" name="answer7.1" value="3">
                                         6
                                     </label>
                                 </div>
@@ -274,19 +299,19 @@
                                 допущено помилку (див мал.4) <br/>
                                 <div class="control">
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer8.1">
+                                        <input type="checkbox" name="answer8.1" value="0">
                                         Пропущено ";"
                                     </label><br/>
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer8.1">
+                                        <input type="checkbox" name="answer8.1" value="1">
                                         Вказаний некоректний тип даних
                                     </label><br/>
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer8.1">
+                                        <input type="checkbox" name="answer8.1" value="2">
                                         Некоректно виділено пам'ять для масиву
                                     </label><br/>
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer8.1">
+                                        <input type="checkbox" name="answer8.1" value="3">
                                         Загублено while в ході написання коду
                                     </label><br/>
                                 </div>
@@ -294,19 +319,19 @@
 
                                 <div class="control">
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer8.1">
+                                        <input type="checkbox" name="answer8.1" value="4">
                                         4
                                     </label>
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer8.1">
+                                        <input type="checkbox" name="answer8.1" value="5">
                                         7
                                     </label>
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer8.1">
+                                        <input type="checkbox" name="answer8.1" value="6">
                                         11
                                     </label>
                                     <label class="checkbox">
-                                        <input type="checkbox" name="answer8.1">
+                                        <input type="checkbox" name="answer8.1" value="7">
                                         15
                                     </label>
                                 </div>
@@ -317,38 +342,38 @@
                                 роботи.<br/>
                                 <div class="control">
                                     <label class="radio">
-                                        <input type="radio" name="answer9.1">
+                                        <input type="radio" name="answer9.1" value="0">
                                         Random
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer9.1">
+                                        <input type="radio" name="answer9.1" value="1">
                                         Heap
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer9.1">
+                                        <input type="radio" name="answer9.1" value="2">
                                         Bubble
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer9.1">
+                                        <input type="radio" name="answer9.1" value="3">
                                         Merge
                                     </label>
                                 </div>
 
                                 <div class="control">
                                     <label class="radio">
-                                        <input type="radio" name="answer9.2">
+                                        <input type="radio" name="answer9.2" value="4">
                                         O(n)
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer9.2">
+                                        <input type="radio" name="answer9.2" value="5">
                                         O(n*log(n))
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer9.2">
+                                        <input type="radio" name="answer9.2" value="6">
                                         O(n*n!)
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer9.2">
+                                        <input type="radio" name="answer9.2" value="7">
                                         O(n!)
                                     </label>
                                 </div>
@@ -358,25 +383,26 @@
                                 повільніше?
                                 <div class="control">
                                     <label class="radio">
-                                        <input type="radio" name="answer10.1">
+                                        <input type="radio" name="answer10.1" value="0">
                                         Quick Sort
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer9.2">
+                                        <input type="radio" name="answer9.2" value="1">
                                         Shell Sort
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer9.2">
+                                        <input type="radio" name="answer9.2" value="2">
                                         Random Sort
                                     </label>
                                     <label class="radio">
-                                        <input type="radio" name="answer9.2">
+                                        <input type="radio" name="answer9.2" value="3">
                                         Heap Sort
                                     </label>
                                 </div>
                             </div>
-                            <a class="button">Завершити</a>
+                            <button class="button" type="submit">Завершити</button>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
