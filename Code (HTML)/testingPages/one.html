@@ -103,7 +103,14 @@
                                   }
                                 });
 
-                                if (document.getElementsByName('answer3.1')[0].value !== "1") {
+                                  document.getElementsByName('answer2.1').forEach(input => {
+                                      if (input.value === "0" && input.checked === false) {
+                                      throw Error();
+                                  }
+                                });
+
+
+                                if (document.getElementsByName('answer3.1')[0].value !== "3.1") {
                                   throw Error();
                                 }
 
