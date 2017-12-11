@@ -227,6 +227,7 @@ $(document).ready(function() {
   $('#start-sort').click(() => {
     stopFlag = false;
     var initial = $('input[name="array"]').val().trim().split(',').map(n=>parseInt(n, 10));
+    var waitTime = parseInt($('input[name="wait"]').val(),10);
     var previous = [...initial];
     $('#display-sort').html(generateHtml(initial));
     const type = $( "#sort-type option:selected" ).val();
@@ -243,7 +244,7 @@ $(document).ready(function() {
           arr.forEach((elem, k) => {
             changeSortElement(k, elem, changes.indexOf(k) !== -1);
           });
-          await wait(500);
+          await wait(waitTime);
         }
         previous = [...arr];
       }).then(console.log, console.log);

@@ -626,6 +626,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
     $('#start-sort').click(function () {
       stopFlag = false;
       var initial = $('input[name="array"]').val().trim().split(',').map(n=>parseInt(n, 10));
+      var waitTime = parseInt($('input[name="wait"]').val(),10);
       var previous = [].concat(_toConsumableArray(initial));
       $('#display-sort').html(generateHtml(initial));
       var type = $("#sort-type option:selected").val();
@@ -658,7 +659,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                       changeSortElement(k, elem, changes.indexOf(k) !== -1);
                     });
                     _context12.next = 7;
-                    return wait(500);
+                    return wait(waitTime);
 
                   case 7:
                     previous = [].concat(_toConsumableArray(arr));
