@@ -1,3 +1,2 @@
 # Sorting-Algorithms
-dasdas
-My Project #1
+Sort everything with joy!
